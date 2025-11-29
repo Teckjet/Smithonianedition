@@ -1395,7 +1395,7 @@ section,
 :root{
   /* Flag palette */
   --pee-plum:  #372B3B;
-  --pee-red:   #D54F33;
+  --pee-red:   #cc0000;
   --pee-green: #528228;  /* button green (use #66A233 if you prefer brighter) */
   --pee-sand:  #E9D6B7;  /* hero background */
   --pee-cream: #F7F2F1;  /* optional page bg */
@@ -1458,7 +1458,7 @@ body.index-page{ background: var(--pee-cream); }
 :root{
   --pee-sand-body: #E9D6B7;  /* your page background (keep as-is if set) */
   --pee-sand-hf:   #D4C3A7;  /* header/footer from swatch */
-  --pee-red:       #D54F33;  /* flag red for hover/active */
+  --pee-red:       #cc0000;  /* flag red for hover/active */
 }
 
 /* Navbar link colors */
@@ -1499,7 +1499,7 @@ body.index-page{ background: var(--pee-cream); }
 /* === Navbar uses swatch color (#D4C3A7) === */
 :root{
   --pee-sand-hf: #D4C3A7;      /* header/footer/navbar bg */
-  --pee-red:     #D54F33;      /* hover/active */
+  --pee-red:     #CC0000;      /* hover/active */
   --nav-color: #000000;
   --nav-hover-color: var(--pee-red);
   --nav-mobile-background-color: var(--pee-sand-hf);
@@ -1538,11 +1538,11 @@ body.index-page{ background: var(--pee-cream); }
 .navmenu .active:focus{ color: var(--nav-hover-color) !important; }
 
 /* Hero H2 = flag red, and kill any underline band */
-#hero h2 { color: #D54F33 !important; }
+#hero h2 { color: #cc0000 !important; }
 #hero h2 .underlight::before { display: none !important; }
 
 /* Site title in flag red */
-:root{ --pee-red: #D54F33; } /* keep if not already set */
+:root{ --pee-red: #cc0000; } /* keep if not already set */
 .site-title{
   color: var(--pee-red) !important;
   
@@ -1579,7 +1579,7 @@ body.index-page{ background: var(--pee-cream); }
 #hero small{ color: rgba(255,255,255,.85) !important; }
 
 /* Keep your red H2 (no underline) exactly as you set earlier */
-#hero h2{ color:#D54F33 !important; }
+#hero h2{ color:#CC0000 !important; }
 #hero h2 .underlight::before{ display:none !important; }
 
 /* Button stays green and stands out on the dark image */
@@ -1620,7 +1620,7 @@ body.index-page{ background: var(--pee-cream); }
 #hero small{ color: rgba(255,255,255,.85) !important; }
 
 /* Keep your red H2 (no underline) exactly as you set earlier */
-#hero h2{ color:#D54F33 !important; }
+#hero h2{ color:#CC0000 !important; }
 #hero h2 .underlight::before{ display:none !important; }
 
 /* Button stays green and stands out on the dark image */
@@ -1657,7 +1657,7 @@ body.index-page{ background: var(--pee-cream); }
 #hero.hero::before{ content:none !important; }
 
 /* Text on light sand tint */
-#hero h2{ color:#D54F33 !important; }           /* red title */
+#hero h2{ color:#CC0000 !important; }           /* red title */
 #hero p, #hero small{ color:#222 !important; }  /* dark body text */
 
 
@@ -1684,8 +1684,8 @@ body.index-page{ background: var(--pee-cream); }
 
 /* Headings/links inside About to match the site palette */
 #about h1, #about h2, #about h3 { color: #372B3B !important; }   /* plum */
-#about a { color: #D54F33; }                                     /* flag red */
-#about a:hover { color: color-mix(in srgb, #D54F33 85%, white); }
+#about a { color: #CC0000; }                                     /* flag red */
+#about a:hover { color: color-mix(in srgb, #CC0000 85%, white); }
 
 /* Optional: card-style boxes inside About */
 #about .card, #about .content, #about .surface, .container section-title {
@@ -1737,7 +1737,7 @@ body.index-page{ background: var(--pee-cream); }
 /* Header palette */
 :root{
   --pee-swatch: #D4C3A7;   /* header/nav background (your sand swatch) */
-  --pee-red:    #D54F33;   /* flag red */
+  --pee-red:    #CC0000;   /* flag red */
 }
 
 /* Header container + title */
@@ -1794,7 +1794,7 @@ body.index-page{ background: var(--pee-cream); }
               var(--pee-cream, #F7F2F1) 0 90deg,
               var(--pee-plum,  #372B3B) 90deg 180deg,
               var(--pee-green, #528228) 180deg 270deg,
-              var(--pee-red,   #D54F33) 270deg 360deg) !important;
+              var(--pee-red,   #CC0000) 270deg 360deg) !important;
   background-color: transparent !important; /* beat template’s section bg */
 }
 
@@ -1894,3 +1894,91 @@ body.index-page{ background: var(--pee-cream); }
 @media (max-width: 576px){
   .site-title .site-flag{ height: 32px; }
 }
+/* -----------------------------------------------------------
+   RED THEME OVERRIDES (replaces all orange accents with red)
+   ----------------------------------------------------------- */
+
+:root {
+  --accent-color: #cc0000;
+  --accent: #cc0000;
+  --primary-color: #cc0000;
+  --highlight-color: #cc0000;
+  --bs-primary: #cc0000;
+
+  /* If your theme uses these (many do) */
+  --color-primary: #cc0000;
+  --color-accent: #cc0000;
+  --default-color: #cc0000;
+}
+
+/* Buttons */
+.btn-get-started,
+.btn-primary,
+button,
+input[type="submit"] {
+  background: #cc0000 !important;
+  border-color: #cc0000 !important;
+}
+
+.btn-get-started:hover,
+.btn-primary:hover {
+  background: #a30000 !important;
+  border-color: #a30000 !important;
+}
+
+/* Links / Navbar Highlights */
+.navmenu a:hover,
+.navmenu a.active,
+.navmenu .active 
+
+/* ================================
+   PEEPEEKISIS RED THEME OVERRIDES
+   (Put this at the VERY BOTTOM)
+   ================================ */
+
+:root {
+  /* In case the template uses CSS variables */
+  --color-primary: #cc0000;
+  --color-secondary: #cc0000;
+  --accent-color: #cc0000;
+  --accent: #cc0000;
+  --primary-color: #cc0000;
+}
+
+/* Header title text */
+.header .site-title {
+  color: #cc0000 !important;
+}
+
+/* Nav active / hover link colors */
+.navmenu a:hover,
+.navmenu a:focus,
+.navmenu a.active,
+.navmenu li:hover > a {
+  color: #cc0000 !important;
+}
+
+/* Hero button */
+
+
+
+
+/* Any template "primary"/accent text */
+.text-primary,
+.text-orange,
+.text-accent {
+  color: #cc0000 !important;
+}
+
+/* Any borders that were orange/accent */
+.border-primary,
+.border-accent,
+.border-orange {
+  border-color: #cc0000 !important;
+}
+
+
+
+
+
+
