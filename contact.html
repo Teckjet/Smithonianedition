@@ -3,10 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Peepeekisis Cree Museum: Smithsonian Edition</title>
-  <meta name="description" content="Peepeekisis Cree Museum: Smithsonian Edition" />
+  <title>Peepeekisis Cree Nation Virtual Archieves And Museum</title>
+  <meta name="description" content="Peepeekisis Cree Nation Virtual Archieves And Museum" />
   <meta name="keywords" content="Cree, Peepeekisis, Museum, Smithsonian" />
 
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+  <!-- Favicon -->
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/Peepeekisis-Flag.png" />
 
@@ -27,7 +32,101 @@
 
   <!-- Tiny utility for the green side-borders on the featured image -->
   <style>
+    
+    
+
+/* Base helper: IM Fell English SC with gentle spacing */
+.pee-vintage {
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 2px;
+}
+
+/* Apply vintage font to key text on THIS page only */
+
+.hero-text-panel h3,
+.hero-text-panel p,
+.hero-text-panel small,
+.navmenu > ul > li > a ,
+.section h2,
+.section h3,
+.footer .sitename {
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 2px;
+}
+
+/* -------- Style A: Elegant Museum Title for H1 -------- */
+.site-title.with-flag span {
+  font-family: "Playfair Display", serif !important;
+  letter-spacing: 1.2px;
+  font-weight: 700;   /* elegant bold, not too heavy */
+  text-rendering: optimizeLegibility;
+}
+.border-pee { border-color: var(--pee-green) !important; }
+ 
+/* Base helper: IM Fell English SC with gentle spacing */
+.pee-vintage {
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 2px;
+}
+
+/* Apply vintage font to key text on THIS page only */
+
+.hero-text-panel h3,
+.hero-text-panel p,
+.hero-text-panel small,
+.navmenu > ul > li > a ,
+.section h2,
+.section h3,
+
+/* -------- Style A: Elegant Museum Title for H1 -------- */
+.site-title.with-flag span {
+  font-family: "Playfair Display", serif !important;
+  letter-spacing: 1.2px;
+  font-weight: 700;   /* elegant bold, not too heavy */
+  text-rendering: optimizeLegibility;
+}
+
+
     .border-pee { border-color: var(--pee-green) !important; }
+ .navmenu > ul > li > a {
+  font-family: "IM Fell English SC", serif !important;
+  letter-spacing: 2.5px;                     /* subtle vintage spacing */
+  font-weight: normal;                       /* IM Fell looks best un-bolded */
+  text-rendering: optimizeLegibility;
+
+  /* LIGHT vintage carved effect */
+
+
+  filter: contrast(110%) sepia(6%);          /* gentle “aged” tone */
+}
+
+/* -------- Style C for DROPDOWN MENU ITEMS -------- */
+.navmenu .dropdown ul a {
+  font-family: "IM Fell English SC", serif !important;
+  letter-spacing: 2px;
+  font-weight: normal;
+
+  text-rendering: optimizeLegibility;
+
+  /* light vintage carved/ink look */
+
+
+  filter: contrast(108%) sepia(5%);
+}
+
+.site-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-title-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+  
   </style>
 </head>
 
@@ -35,34 +134,38 @@
 
   <!-- Header (background & nav colors are controlled in main.css overrides) -->
 <header class="header">
-  <div class="container">
-   <h1 class="site-title with-flag">
+<div class="container">
+   <h1 class="site-title with-flag">   
+       <a href="index.html" class="site-title-link">
   <img
     src="assets/img/Peepeekisis-Flag.png"
     alt="Peepeekisis Cree Nation flag"
     class="site-flag"
     width="56" height="36"
     loading="lazy" decoding="async" />
-  <span>Peepeekisis Cree Nation Museum: <em>Smithsonian Edition</em></span>
+         <span>Peepeekisis Cree Nation Virtual Archieves And Museum</span></a>
 </h1>
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html" >About</a></li>
         <li class="dropdown">
-          <a href="gallery.html"><span>Gallery</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <a href="photographs.html"><span>Photographs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="gallery.html">Headdresses &amp; Headgear</a></li>
+            <li><a href="headdressesandheadgear.html">Headdresses &amp; Headgear</a></li>
             <li><a href="gallery.html">Clothing</a></li>
             <li><a href="gallery.html">Footwear</a></li>
             <li><a href="gallery.html">Jewelry &amp; Adornment</a></li>
             <li><a href="gallery.html">Bags, Belts &amp; Sashes</a></li>
             <li><a href="gallery.html">Ceremony, Dance &amp; Medicine</a></li>
             <li><a href="gallery.html">Household, Travel &amp; Tools</a></li>
+            <li><a href="gallery.html">Tipis</a></li>
+            <li><a href="gallery.html">Games</a></li>
+            <li><a href="gallery.html">Community</a></li>
           </ul>
         </li>
-  
-        <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html">Oral History </a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
@@ -182,7 +285,7 @@
   <footer id="footer" class="footer">
     <div class="container">
       <div class="copyright text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Peepeekisis First Nation</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Peepeekisis Cree Nation</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="#"><i class="bi bi-twitter-x"></i></a>
