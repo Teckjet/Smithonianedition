@@ -1976,9 +1976,1357 @@ input[type="submit"] {
 .border-orange {
   border-color: #cc0000 !important;
 }
+/* ===========================
+   Museum-style homepage skin
+   (put at the very bottom)
+   =========================== */
+
+:root{
+  --museum-ink: #1c1b18;
+  --museum-paper: #f6f0e6;
+  --museum-sand: #D4C3A7;  /* your swatch */
+  --museum-green: #528228; /* your pee-green */
+  --museum-red: #cc0000;   /* your pee-red */
+}
+
+/* overall page feel */
+body{ background: var(--museum-paper); }
+.section{ background: transparent; }
+
+/* header stays sand, text readable */
+.header{
+  background: var(--museum-sand) !important;
+  border-bottom: 1px solid rgba(0,0,0,.12) !important;
+}
+
+/* hero: full-bleed photo with subtle film overlay */
+.museum-hero{
+  position: relative;
+  min-height: 70vh;
+  display: grid;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+}
+
+.museum-hero .hero-bg{
+  position:absolute; inset:0;
+  background-position:center;
+  background-size:cover;
+  filter: saturate(0.95) contrast(1.02);
+  transform: scale(1.02);
+}
+
+.museum-hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.30)),
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,.08), transparent 45%);
+  pointer-events:none;
+}
+
+.museum-hero .container{ position: relative; z-index: 1; }
+
+/* the “museum card” like Haida Heritage Centre’s welcome block vibe */
+.hero-card{
+  max-width: 860px;
+  background: rgba(246,240,230,.92);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 18px;
+  padding: 28px 26px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+  color: var(--museum-ink);
+}
+
+.hero-eyebrow{
+  margin: 0 0 6px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(0,0,0,.70);
+}
+
+.hero-title{
+  margin: 0 0 12px;
+  color: var(--museum-red);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.hero-lede{
+  margin: 0 0 16px;
+  color: rgba(0,0,0,.82);
+  max-width: 65ch;
+}
+
+.hero-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 10px 0 8px;
+}
+
+.btn-hero{
+  border-radius: 999px !important;
+  padding: 12px 18px !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+/* primary = green, secondary outline = ink */
+.btn-primary{
+  background: var(--museum-green) !important;
+  border-color: var(--museum-green) !important;
+}
+.btn-primary:hover{
+  background: color-mix(in srgb, var(--museum-green) 85%, white) !important;
+}
+
+.btn-outline{
+  background: transparent;
+  border: 1px solid rgba(0,0,0,.35);
+  color: var(--museum-ink);
+}
+.btn-outline:hover{
+  background: rgba(0,0,0,.06);
+}
+
+.hero-credit{
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: rgba(0,0,0,.65);
+}
+
+/* tiles */
+.museum-tiles .section-head{
+  text-align: center;
+  margin-bottom: 22px;
+}
+.museum-tiles .section-head h3{
+  color: var(--museum-ink);
+  margin: 0 0 6px;
+}
+.museum-tiles .section-head p{
+  margin: 0;
+  color: rgba(0,0,0,.70);
+}
+
+.tile-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 992px){
+  .tile-grid{ grid-template-columns: 1fr; }
+}
+
+.tile{
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+  color: inherit;
+  box-shadow: 0 10px 26px rgba(0,0,0,.10);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.tile:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.14);
+}
+.tile img{
+  width:100%;
+  height: 180px;
+  object-fit: cover;
+  display:block;
+}
+.tile-body{
+  padding: 14px 14px 16px;
+}
+.tile-body h4{
+  margin: 0 0 4px;
+  color: var(--museum-ink);
+  font-size: 18px;
+}
+.tile-body p{
+  margin: 0;
+  color: rgba(0,0,0,.70);
+}
+
+/* featured story split */
+.feature-grid{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 18px;
+  align-items: center;
+}
+@media (max-width: 992px){
+  .feature-grid{ grid-template-columns: 1fr; }
+}
+.feature-media img{
+  width:100%;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.10);
+  box-shadow: 0 14px 36px rgba(0,0,0,.14);
+}
+.feature-copy{
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 18px;
+  padding: 18px;
+  color: var(--museum-ink);
+}
+.feature-copy h3{ margin: 0 0 8px; color: var(--museum-ink); }
+.feature-copy p{ margin: 0 0 12px; color: rgba(0,0,0,.75); }
+
+
+/* ===============================
+   Museum Surface Unification
+   =============================== */
 
 
 
+/* ==========================================
+   Photo Header (Place + Flag + Playfair Title)
+   ========================================== */
+
+.header.header-photo{
+  position: relative;
+  padding: 28px 0 18px;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  background: transparent !important;
+  overflow: hidden;
+}
+
+/* Background photo */
+.header.header-photo .header-bg{
+  position: absolute;
+  inset: 0;
+  background-position: left center; /* keeps the sign visible */
+  background-size: cover;
+  transform: scale(1.02);
+}
+
+/* Warm museum overlay (NOT black) */
+.header.header-photo .header-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(233,214,183,.35),
+    rgba(0,0,0,.25)
+  );
+}
+
+/* Keep header content above bg */
+.header.header-photo .container{
+  position: relative;
+  z-index: 1;
+}
+
+/* Title styling (uses your Playfair span rule) */
+.header.header-photo .site-title{
+  text-align: center;
+  margin: 8px 0 10px;
+  color: #fff !important;
+}
+
+/* Make the flag feel like an emblem */
+.header.header-photo .site-flag{
+  height: 40px;
+  width: auto;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+/* Nav centered & calm */
+@media (min-width:1200px){
+  .header.header-photo .navmenu ul{
+    justify-content: center;
+  }
+}
+
+/* Nav link color on photo */
+.header.header-photo .navmenu a,
+.header.header-photo .navmenu a:focus{
+  color: rgba(255,255,255,.92) !important;
+}
+
+/* Hover/active underline (museum-like, not loud) */
+@media (min-width:1200px){
+  .header.header-photo .navmenu a{
+    position: relative;
+  }
+  .header.header-photo .navmenu a::after{
+    content:"";
+    position:absolute;
+    left:10px; right:10px; bottom:6px;
+    height:2px;
+    background: transparent;
+    transition: .2s ease;
+  }
+  .header.header-photo .navmenu li:hover > a::after,
+  .header.header-photo .navmenu .active::after{
+    background: rgba(255,255,255,.85);
+  }
+}
+
+/* Dropdown menu should be readable (paper card) */
+@media (min-width:1200px){
+  .header.header-photo .navmenu .dropdown ul{
+    background: rgba(246,240,230,.96) !important;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 12px;
+    box-shadow: 0 18px 44px rgba(0,0,0,.22);
+  }
+  .header.header-photo .navmenu .dropdown ul a{
+    color: #111 !important;
+  }
+}
+
+/* Mobile: menu panel readable */
+@media (max-width:1199px){
+  .header.header-photo .navmenu ul{
+    background: rgba(246,240,230,.96) !important;
+    border: 1px solid rgba(0,0,0,.12);
+  }
+  .header.header-photo .mobile-nav-toggle{
+    color: rgba(255,255,255,.92) !important;
+  }
+}
+
+/* Tighten spacing on small screens */
+@media (max-width:576px){
+  .header.header-photo{
+    padding: 22px 0 14px;
+  }
+  .header.header-photo .site-flag{
+    height: 32px;
+  }
+}
+/* ===== FORCE PHOTO HEADER LOOK (override earlier sand rules) ===== */
+.header.header-photo{
+  position: relative;
+  min-height: 220px;              /* makes the photo actually show */
+  display: flex;
+  align-items: flex-end;          /* title/nav sit toward bottom like museum sites */
+  padding: 0 0 14px !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255,255,255,.18) !important;
+  overflow: hidden;
+}
+
+.header.header-photo .header-bg{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% center;  /* pushes focus to the open sky/right */
+  transform: scale(1.02);
+}
+
+/* warm overlay, not beige block */
+.header.header-photo .header-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45));
+}
+
+/* ensure everything is above photo */
+.header.header-photo .container{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+/* ===== NAV MUST FLOAT ON PHOTO (desktop) ===== */
+@media (min-width:1200px){
+  .header.header-photo .navmenu,
+  .header.header-photo .navmenu ul{
+    background: transparent !important;   /* kills beige bar */
+  }
+
+  .header.header-photo .navmenu a,
+  .header.header-photo .navmenu a:focus{
+    color: rgba(255,255,255,.92) !important;  /* readable on photo */
+  }
+}
+
+/* Dropdown should still be readable */
+@media (min-width:1200px){
+  .header.header-photo .navmenu .dropdown ul{
+    background: rgba(246,240,230,.96) !important;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 12px;
+    box-shadow: 0 18px 44px rgba(0,0,0,.22);
+  }
+  .header.header-photo .navmenu .dropdown ul a{
+    color: #111 !important;
+  }
+}
+
+/* ===== HEADER TITLE = HERO FONT LOOK ===== */
+.header.header-photo .site-title.with-flag span{
+  color: rgba(255,255,255,.96) !important;
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  text-shadow: 0 6px 18px rgba(0,0,0,.35);
+}
+/* ===== Flag as corner crest (header only) ===== */
+.header.header-photo .site-title.with-flag{
+  position: relative;
+  justify-content: center;  /* keep the big title centered */
+  gap: 16px;
+}
+
+/* Turn the flag into a fixed corner crest */
+.header.header-photo .site-flag{
+  position: absolute;
+  left: 18px;
+  top: 18px;
+
+  height: 46px;       /* adjust if you want bigger/smaller */
+  width: auto;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+
+  background: rgba(0,0,0,.12); /* subtle “badge plate” */
+  padding: 6px;
+
+  z-index: 3;
+}
+
+/* Make sure the title doesn’t overlap the crest on small screens */
+@media (max-width: 768px){
+  .header.header-photo .site-flag{
+    left: 12px;
+    top: 12px;
+    height: 36px;
+    padding: 5px;
+  }
+
+  .header.header-photo .site-title.with-flag span{
+    padding-left: 72px; /* gives breathing room so text doesn’t crash into crest */
+  }
+}
+
+/* Optional: hide the little inline-flex gap since flag is now absolute */
+.header.header-photo .site-title-link{
+  gap: 0;
+}
+/* ===== Fix: keep corner flag WITHOUT colliding with centered title ===== */
+.header.header-photo .container{
+  position: relative;
+  padding-left: 92px;  /* creates a safe zone equal to flag width */
+}
+
+/* Keep title truly centered within the safe zone */
+.header.header-photo .site-title{
+  margin: 10px 0 8px;
+  text-align: center;
+}
+
+/* Corner crest */
+.header.header-photo .site-flag{
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  height: 46px;
+  width: auto;
+  padding: 6px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  background: rgba(0,0,0,.12);
+  z-index: 5;
+}
+
+/* On small screens, reduce the safe zone + crest size */
+@media (max-width: 768px){
+  .header.header-photo .container{ padding-left: 68px; }
+  .header.header-photo .site-flag{
+    left: 12px;
+    top: 12px;
+    height: 34px;
+    padding: 5px;
+  }
+}
+.header.header-photo .site-title{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,.18);
+  backdrop-filter: blur(2px);
+}
+/* ===== Corner flag crest (NO overlap with title text) ===== */
+
+/* Make the title link a block and reserve space on the left */
+.header.header-photo .site-title-link{
+  display: block !important;
+  position: relative;
+  padding-left: 88px;     /* SAFE SPACE for the flag */
+  padding-right: 18px;
+}
+
+/* Center the text within the remaining space */
+.header.header-photo .site-title.with-flag span{
+  display: block;
+  text-align: center;
+}
+
+/* Put the flag into that reserved space */
+.header.header-photo .site-title-link .site-flag{
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 46px;
+  width: auto;
+
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  background: rgba(0,0,0,.12);
+  z-index: 5;
+}
+
+/* Mobile tightening */
+@media (max-width: 768px){
+  .header.header-photo .site-title-link{ padding-left: 66px; }
+  .header.header-photo .site-title-link .site-flag{
+    left: 12px;
+    height: 34px;
+    padding: 5px;
+  }
+}
+/* ===== Header Crest (official layout) ===== */
+
+.header.header-photo{
+  position: relative;
+}
+
+/* Crest */
+.site-crest{
+  position:fixed;
+  top: 1px;
+  left: 18px;
+  z-index: 20;
+}
+
+.site-crest img{
+  height: 64px;
+  width: auto;
+  padding: 2px;
+
+  
+ 
+ 
+  box-shadow: 0 14px 34px rgba(0,0,0,.4);
+}
+
+/* Give header content breathing room */
+.header.header-photo .container{
+  padding-left: 120px;
+}
+
+/* Title styling */
+.site-title{
+  text-align: center;
+  margin: 18px 0 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.site-title a{
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Mobile refinement */
+@media (max-width: 768px){
+  .site-crest img{
+    height: 44px;
+    padding: 6px;
+  }
+  .header.header-photo .container{
+    padding-left: 78px;
+  }
+}
+
+/* Crest centered (inside header) */
+.header.header-photo{
+  position: relative; /* anchor for absolute children */
+}
+
+.site-crest{
+  position: absolute;      /* was fixed */
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.site-crest img{
+  height: 64px;
+  width: auto;
+  padding: 2px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.4);
+}
+.header.header-photo .container{
+  padding-left: 0 !important;  /* was 120px */
+}
+.header.header-photo .site-title{
+  margin-top: 88px; /* pushes title down under the centered flag */
+}
+
+@media (max-width: 768px){
+  .site-crest img{ height: 44px; }
+  .header.header-photo .site-title{ margin-top: 66px; }
+}
+/* ===== FIX: center the heading perfectly (with centered crest above) ===== */
+
+/* remove any leftover "safe zone" padding from the old corner-flag approach */
+.header.header-photo .container{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* make the title take the full width so text-align:center actually centers */
+.header.header-photo .site-title{
+  width: 100% !important;
+  display: block !important;
+  text-align: center !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* kill any left-padding that was added to make room for the corner flag */
+.header.header-photo .site-title-link{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  display: inline-block;     /* keeps it neat */
+}
+
+/* make sure the title text itself is centered */
+.header.header-photo .site-title.with-flag span{
+  display: inline !important;   /* or block — either works now */
+  text-align: center !important;
+}
+/* --- FIX: allow dropdown to escape the photo header --- */
+.header.header-photo{
+  overflow: visible !important;
+}
+
+/* make sure dropdown can sit above the photo */
+@media (min-width:1200px){
+  .header.header-photo .navmenu .dropdown ul{
+    z-index: 9999 !important;
+  }
+}
+/* --- FIX: overlays must NOT block clicks --- */
+.header.header-photo .header-bg,
+.header.header-photo .header-overlay{
+  pointer-events: none !important;
+}
+/* =========================
+   DROPDOWN NOT SHOWING (DESKTOP)
+   ========================= */
+
+/* 1) If the photo header is clipping the dropdown */
+.header.header-photo{
+  overflow: visible !important;
+}
+
+/* 2) Make sure the photo/overlay can’t block hover/clicks */
+.header.header-photo .header-bg,
+.header.header-photo .header-overlay{
+  pointer-events: none !important;
+}
+
+/* 3) Force dropdown to render above everything */
+@media (min-width:1200px){
+  .header.header-photo .navmenu,
+  .header.header-photo .navmenu ul,
+  .header.header-photo .navmenu li{
+    overflow: visible !important;
+  }
+
+  .header.header-photo .navmenu .dropdown{
+    position: relative;
+  }
+
+  .header.header-photo .navmenu .dropdown ul{
+    z-index: 99996 !important;
+  }
+}
+
+@media (min-width:1200px){
+  .header.header-photo .navmenu .dropdown ul{
+    top: 100% !important;      /* ensure it drops down under the menu */
+    left: 0 !important;
+  }
+}
+/* ===============================
+   HEADER TYPOGRAPHY – IM FELL ENGLISH SC
+   =============================== */
+
+/* Header title */
+.header.header-photo .site-title,
+.header.header-photo .site-title span,
+.header.header-photo .site-title a{
+  font-family: "IM Fell English SC", serif !important;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+/* Navigation links to change nav header font */
+.header.header-photo .navmenu a,
+.header.header-photo .navmenu a:focus,
+.header.header-photo .navmenu .dropdown ul a,.h4{
+  font-family: "IM Fell English SC", serif !important;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Slightly tighten nav spacing so it feels refined */
+@media (min-width:1200px){
+  .header.header-photo .navmenu a{
+    padding: 16px 14px;
+  }
+}
+
+/* ===============================
+   MOBILE NAV – MUSEUM BLEND
+   =============================== */
+
+@media (max-width: 1199px){
+
+  /* Mobile nav bar container */
+  .header.header-photo .navmenu{
+    background: rgba(212,195,167,0.88) !important; /* sand, translucent */
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+    margin: 8px 12px 0;
+    padding: 6px 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  }
+
+  /* Hamburger icon */
+  .mobile-nav-toggle{
+    color: #372B3B !important; /* plum from flag */
+    font-size: 30px;
+  }
+
+  /* Dropdown panel */
+  .navmenu ul{
+    background: rgba(246,240,230,.96) !important;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,.12);
+    box-shadow: 0 18px 44px rgba(0,0,0,.25);
+  }
+
+  /* Links */
+  .navmenu a{
+    font-family: "IM Fell English SC", serif !important;
+    color: #1c1b18 !important;
+    letter-spacing: .1em;
+  }
+}
+/* ===============================
+   SCROLL TOP – ARROWHEAD
+   =============================== */
+
+.scroll-top{
+  background: rgba(212,195,167,.95) !important; /* sand */
+  border: 1px solid rgba(0,0,0,.25);
+  box-shadow: 0 10px 26px rgba(0,0,0,.25);
+}
+
+/* Hide the default circle icon */
+.scroll-top i{
+  display: none;
+}
+
+/* Arrowhead */
+.scroll-top::before{
+  content: "▲";
+  display: block;
+  color: #372B3B;              /* plum */
+  font-size: 20px;
+  line-height: 44px;
+  text-align: center;
+  font-family: serif;
+  transform: translateY(-1px);
+}
+
+/* Hover refinement */
+.scroll-top:hover{
+  background: rgba(212,195,167,1) !important;
+}
+
+/* =========================================
+   MOBILE NAV: fix low-contrast white links
+   ========================================= */
+@media (max-width: 1199px){
+
+  /* The opened menu panel */
+  .mobile-nav-active .navmenu > ul{
+    background: rgba(246,240,230,0.96) !important;
+    border: 1px solid rgba(0,0,0,.14) !important;
+    border-radius: 18px;
+  }
+
+  /* Make ALL menu link text dark (readable) */
+  .mobile-nav-active .navmenu a,
+  .mobile-nav-active .navmenu a:focus{
+    color: #1b1b1b !important;
+    font-weight: 600;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+
+  /* Hover/active state */
+  .mobile-nav-active .navmenu .active,
+  .mobile-nav-active .navmenu li:hover > a{
+    color: #cc0000 !important; /* your flag red */
+  }
+
+  /* The dropdown chevron button (right side circle) */
+  .mobile-nav-active .navmenu a i,
+  .mobile-nav-active .navmenu a:focus i{
+    color: #1b1b1b !important;
+    background: rgba(0,0,0,0.06) !important;
+  }
+
+  /* Dropdown list panel inside mobile menu */
+  .mobile-nav-active .navmenu .dropdown ul{
+    background: rgba(255,255,255,0.75) !important;
+    border: 1px solid rgba(0,0,0,.10) !important;
+    border-radius: 14px;
+  }
+
+  .mobile-nav-active .navmenu .dropdown ul a{
+    color: #1b1b1b !important;
+    font-weight: 600;
+  }
+}
+/* =========================================
+   ABOUT (Option 1) – Soft Continuation Hero
+   ========================================= */
+
+.about-hero{
+  position: relative;
+  overflow: hidden;
+  padding: 44px 0 54px;
+  margin-top: -1px; /* removes tiny seam under header */
+}
+
+/* photo continues below the nav */
+.about-hero-bg{
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.02);
+  filter: saturate(0.95) contrast(1.03);
+}
+
+/* warm museum overlay (matches your header vibe) */
+.about-hero-overlay{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.36)),
+    radial-gradient(circle at 40% 10%, rgba(233,214,183,.20), transparent 55%);
+  pointer-events: none;
+}
+
+.about-hero .container{
+  position: relative;
+  z-index: 1;
+}
+
+/* parchment card */
+.about-hero-card{
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+
+  background: rgba(246,240,230,.92);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 18px;
+  padding: 26px 22px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.32);
+}
+
+.about-eyebrow{
+  margin: 0 0 6px;
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(0,0,0,.70);
+}
+
+.about-title{
+  margin: 0 0 6px;
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: .06em;
+  color: var(--pee-green, #528228);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+}
+
+.about-subtitle{
+  margin: 0;
+  color: rgba(0,0,0,.78);
+  font-size: 18px;
+}
+
+/* mobile breathing room */
+@media (max-width: 576px){
+  .about-hero{ padding: 34px 0 40px; }
+  .about-hero-card{ padding: 20px 16px; border-radius: 14px; }
+  .about-subtitle{ font-size: 16px; }
+}
+/* =========================
+   About page: subtle hero band
+   ========================= */
+body.about-page .about-hero-band{
+  background: #111;                 /* softer than pure black */
+  padding: 72px 0 64px;
+}
+
+body.about-page .about-hero-band h2{
+  color: #fff;
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+}
+
+body.about-page .about-hero-band p{
+  margin: 0;
+  color: #CC0000;                   /* your flag red */
+  font-size: 1.15rem;
+}
+
+/* Optional: a tiny “film” gradient so the band feels less flat */
+body.about-page .about-hero-band{
+  background: linear-gradient(180deg, #0f0f0f 0%, #141414 100%);
+}
+/* ===============================
+   Global mud-brown background
+   =============================== */
+
+
+
+#gallery {
+  background: linear-gradient(
+    180deg,
+    #5a5246 0%,   /* dark mud brown */
+    #6a6154 45%,
+    #7a7062 100%
+  );
+}
+/* ==========================================
+   Step 2: Gallery hover = subtle (no jump)
+   Paste at the VERY BOTTOM of main.css
+   ========================================== */
+
+/* Remove the template’s aggressive zoom on hover */
+.gallery .gallery-item img{
+  transform: none !important;
+  transition: filter .35s ease, transform .35s ease !important;
+  will-change: filter, transform;
+}
+
+/* If you want ZERO movement, keep transform:none */
+.gallery .gallery-item:hover img{
+  transform: none !important;
+}
+
+/* =========================
+   Photographs (Wireframe A)
+   ========================= */
+
+.photo-hero{
+  position: relative;
+  padding: 96px 0;
+  min-height: 48vh;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+}
+
+.photo-hero__bg{
+  position:absolute; inset:0;
+  background-position:center;
+  background-size:cover;
+  transform: scale(1.02);
+}
+
+.photo-hero__overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62));
+}
+
+.photo-hero .container{ position: relative; z-index: 1; }
+
+.photo-hero__card{
+  max-width: 860px;
+  background: rgba(246,240,230,.92);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 18px;
+  padding: 26px 24px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+  color: #1c1b18;
+}
+
+.photo-hero__eyebrow{
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(0,0,0,.70);
+  margin-bottom: 6px;
+}
+
+.photo-hero__title{
+  margin: 0 0 10px;
+  color: var(--pee-green, #528228);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  letter-spacing: 3px;
+}
+
+.photo-hero__lede{ margin: 0 0 8px; color: rgba(0,0,0,.82); }
+.photo-hero__note{ margin: 0 0 14px; color: rgba(0,0,0,.65); font-size: 14px; }
+
+.photo-hero__actions{
+  display:flex; gap: 12px; flex-wrap: wrap;
+}
+
+.btn-hero{
+  border-radius: 999px !important;
+  padding: 12px 18px !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.btn-outline{
+  background: transparent;
+  border: 1px solid rgba(0,0,0,.35);
+  color: #1c1b18;
+}
+.btn-outline:hover{ background: rgba(0,0,0,.06); }
+
+/* Gallery heading */
+.gallery-head{
+  text-align:center;
+  margin: 0 auto 18px;
+  max-width: 70ch;
+}
+.gallery-head h3{ margin: 0 0 6px; }
+.gallery-head p{ margin: 0; color: rgba(255,255,255,.75); }
+
+/* ✅ Scalable: darken ALL gallery tiles without editing images */
+#gallery .gallery-item{
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#gallery .gallery-item img{
+  filter: brightness(55%);
+  transition: transform .25s ease, filter .25s ease;
+}
+
+#gallery .gallery-item:hover img{
+  filter: brightness(85%);
+  transform: scale(1.02);
+}
+/* === Photographs hero: matches index “mud-brown” stage === */
+.photo-hero, .photo-browse-head, #gallery{
+  padding: 72px 0;
+  background: linear-gradient(180deg, rgba(70,62,52,.92), rgba(70,62,52,.92));
+}
+
+
+/* parchment placard */
+.photo-hero-card{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 44px 48px;
+  border-radius: 22px;
+  background: linear-gradient(90deg, #f2eadf, #efe6da, #f2eadf);
+  box-shadow: 0 22px 60px rgba(0,0,0,.35);
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.photo-hero-kicker{
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: .95rem;
+  opacity: .85;
+  margin-bottom: 10px;
+}
+
+.photo-hero-title{
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 6px;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin: 0 0 14px;
+  color: var(--pee-green);
+  text-shadow: 0 1px 0 rgba(255,255,255,.35);
+}
+
+.photo-hero-lede{
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  color: rgba(0,0,0,.78);
+}
+
+.photo-hero-note{
+  margin: 0 0 22px;
+  color: rgba(0,0,0,.62);
+}
+
+.photo-hero-actions{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* section heading after hero */
+.photo-browse-head{
+  padding: 42px 0 18px;
+ 
+}
+
+.photo-browse-title{
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 4px;
+  color: #f2eadf;
+  margin: 0 0 6px;
+}
+
+.photo-browse-sub{
+  color: rgba(242,234,223,.82);
+  margin: 0;
+}
+
+/* mobile tightening */
+@media (max-width: 576px){
+  .photo-hero{ padding: 52px 0; }
+  .photo-hero-card{ padding: 30px 22px; border-radius: 18px; }
+}
+
+/* === Footer text: force white for readability === */
+.footer,
+.footer p,
+.footer span,
+.footer strong,
+.footer .sitename {
+  color: #ffffff !important;
+}
+
+/* Footer social icons */
+.footer .social-links a {
+  color: rgba(255,255,255,0.85) !important;
+  border-color: rgba(255,255,255,0.45) !important;
+}
+
+.footer .social-links a:hover {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+/* =========================================
+   FOOTER: background = bottom of sign photo
+   ========================================= */
+
+.footer{
+  position: relative;
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("../img/featured/peepeekisis_sign_from_far.jpg");
+  background-size: cover;
+  background-position: center bottom; /* 👈 THIS is the key */
+  background-repeat: no-repeat;
+
+  color: #ffffff !important;
+  border-top: none !important;
+}
+
+/* Ensure footer content sits above overlay */
+.footer .container{
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer text */
+.footer,
+.footer p,
+.footer span,
+.footer strong,
+.footer .sitename{
+  color: #ffffff !important;
+}
+
+/* Social icons */
+.footer .social-links a{
+  color: rgba(255,255,255,.9) !important;
+  border-color: rgba(255,255,255,.5) !important;
+}
+
+.footer .social-links a:hover{
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  background: rgba(255,255,255,.15) !important;
+}
+/* =========================================
+   Browse by Category – backrest photo band
+   ========================================= */
+
+.photo-browse-head{
+  position: relative;
+  padding: 72px 0 64px;
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("../img/featured/backrest.png"); /* ← adjust filename if needed */
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Ensure text stays above the overlay */
+.photo-browse-head .container{
+  position: relative;
+  z-index: 2;
+}
+
+/* Typography tuning for photo background */
+.photo-browse-title{
+  color: #f2eadf !important;
+  text-shadow: 0 3px 10px rgba(0,0,0,.55);
+}
+
+.photo-browse-sub{
+  color: rgba(242,234,223,.85) !important;
+}
+/* ===== History timeline (wireframe) ===== */
+.history-timeline{
+  background: linear-gradient(180deg, #5a5246 0%, #6a6154 45%, #7a7062 100%);
+}
+
+.history-timeline .container{
+  max-width: 1050px;
+}
+
+.timeline-item{
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 16px;
+  padding: 18px 0;
+}
+
+.timeline-item::before{
+  content:"";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(242,234,223,.35);
+}
+
+.timeline-marker{
+  position: relative;
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #f2eadf;
+  background: rgba(0,0,0,.22);
+  border: 1px solid rgba(242,234,223,.35);
+  margin-top: 10px;
+}
+
+.timeline-card{
+  background: rgba(242,234,223,.92);
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.25);
+}
+
+.timeline-title{
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 4px;
+  margin: 0 0 10px;
+  color: #1c1b18;
+}
+
+.timeline-block{
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,.08);
+  margin-top: 10px;
+}
+
+.timeline-block h4{
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #1c1b18;
+}
+
+.timeline-list{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(0,0,0,.78);
+}
+
+.muted{ color: rgba(0,0,0,.70); }
+.small{ font-size: 14px; }
+
+.placeholder-box{
+  height: 180px;
+  border-radius: 14px;
+  border: 1px dashed rgba(0,0,0,.25);
+  display: grid;
+  place-items: center;
+  color: rgba(0,0,0,.55);
+  background: rgba(255,255,255,.35);
+}
+
+.timeline-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+@media (max-width: 576px){
+  .timeline-item{ grid-template-columns: 24px 1fr; }
+  .timeline-card{ padding: 14px; border-radius: 14px; }
+  .placeholder-box{ height: 150px; }
+}
 
 
 
