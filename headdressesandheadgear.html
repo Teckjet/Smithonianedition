@@ -7,6 +7,9 @@
   <meta name="description" content="Peepeekisis Cree Nation Virtual Archieves And Museum" />
   <meta name="keywords" content="Cree, Peepeekisis, Museum, Smithsonian" />
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/Peepeekisis-Flag.png" />
 
@@ -14,6 +17,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Inter:wght@400;600&family=Cardo:wght@400;700&display=swap" rel="stylesheet" />
+
 
   <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -29,7 +33,141 @@
   <style>
     .border-pee { border-color: var(--pee-green) !important; }
     
-    .site-title-link {
+/* ===== Museum overlay (keeps photo true, improves readability) ===== */
+
+/* Make sure overlay can sit on top of the image */
+.gallery .gallery-item{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft museum gradient overlay ON TOP of the photo */
+.gallery .gallery-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: 1;
+
+  /* warm + dark edges like museum sites */
+  background:
+    radial-gradient(circle at 50% 40%, rgba(0,0,0,.10), rgba(0,0,0,.55)),
+    linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
+
+  opacity: .85;
+  transition: opacity .35s ease;
+  pointer-events:none;
+}
+
+/* Keep image below overlay */
+.gallery .gallery-item img{
+  display:block;
+  width:100%;
+  height:auto;
+  transform: scale(1.01);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+/* Caption should sit ABOVE overlay */
+.gallery-caption-center{
+  z-index: 2;
+}
+
+/* The clickable icons overlay should be on top too */
+.gallery .gallery-links{
+  z-index: 3;
+}
+
+/* Hover: reveal more photo + subtle lift */
+.gallery .gallery-item:hover::before{
+  opacity: .55;
+}
+.gallery .gallery-item:hover img{
+  transform: scale(1.04);
+}
+
+
+
+    /* Fancy overlay caption for gallery items */
+/* Centered overlay caption */
+.gallery-caption-center {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+
+  font-family: "IM Fell English SC", serif;
+  font-size: 2.4rem;
+  letter-spacing: 6px;
+
+  color:#F1E2C5;
+
+  text-shadow:
+    0 0 3px rgba(0,0,0,0.9),
+    0 4px 12px rgba(0,0,0,0.95),
+    0 -2px 2px rgba(255,255,255,0.15),
+    2px 2px 0 rgba(0,0,0,0.4);
+
+  filter: contrast(118%) sepia(12%);
+  pointer-events:none;
+}
+
+/* -------- Global vintage Peepeekisis font style -------- */
+
+/* Base helper: IM Fell English SC with gentle spacing */
+.pee-vintage {
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 2px;
+}
+
+/* Apply vintage font to key text on THIS page only */
+
+/* Apply vintage font to key text on THIS page only */
+.hero-text-panel h3,
+.hero-text-panel p,
+.hero-text-panel small,
+.section h2,
+.section h3 {
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 2px;
+}
+
+
+
+/* -------- Style A: Elegant Museum Title for H1 -------- */
+.site-title.with-flag span {
+  font-family: "Playfair Display", serif !important;
+  letter-spacing: 1.2px;
+  font-weight: 700;   /* elegant bold, not too heavy */
+  text-rendering: optimizeLegibility;
+}
+/* -------- Style C (Vintage / Weathered IM Fell Style) for NAV MENU -------- */
+.navmenu > ul > li > a {
+  font-family: "IM Fell English SC", serif !important;
+  letter-spacing: 2.5px;                     /* subtle vintage spacing */
+  font-weight: normal;                       /* IM Fell looks best un-bolded */
+  text-rendering: optimizeLegibility;
+
+  /* LIGHT vintage carved effect */
+
+
+  filter: contrast(110%) sepia(6%);          /* gentle “aged” tone */
+}
+
+/* -------- Style C for DROPDOWN MENU ITEMS -------- */
+.navmenu .dropdown ul a {
+  font-family: "IM Fell English SC", serif !important;
+  letter-spacing: 2px;
+  font-weight: normal;
+
+  text-rendering: optimizeLegibility;
+
+  /* light vintage carved/ink look */
+
+
+  filter: contrast(108%) sepia(5%);
+}
+
+.site-title-link {
   text-decoration: none;
   color: inherit;
   display: inline-flex;
@@ -44,41 +182,50 @@
   </style>
 </head>
 
+
 <body class="index-page">
 
   <!-- Header (background & nav colors are controlled in main.css overrides) -->
-<header class="header">
+<header class="header header-photo">
+  <div class="header-bg" style="background-image:url('assets/img/featured/peepeekisis_sign_from_far.jpg');"></div>
+  <div class="header-overlay"></div>
+
   <div class="container">
-   <h1 class="site-title with-flag">   
-     <a href="index.html" class="site-title-link">
-  <img
-    src="assets/img/Peepeekisis-Flag.png"
-    alt="Peepeekisis Cree Nation flag"
-    class="site-flag"
-    width="56" height="36"
-    loading="lazy" decoding="async" />
-       <span>Peepeekisis Cree Nation Virtual Archieves And Museum</span></a>
-</h1>
+ <a href="index.html" class="site-crest" aria-label="Peepeekisis Cree Nation Home">
+      <img
+        src="assets/img/Peepeekisis-Flag.png"
+        alt="Peepeekisis Cree Nation Flag"
+      />
+    </a>
+
+    <!-- Title -->
+    <h1 class="site-title">
+      <a href="index.html">
+        Peepeekisis Cree Nation Virtual Archives And Museum
+      </a>
+    </h1>
+
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="index.html" >Home</a></li>
-        <li><a href="about.html" >About</a></li>
+        <li><a href="about.html">About</a></li>
         <li class="dropdown">
-          <a href="photographs.html" class="active"><span>Photographs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <a href="photographs.html"><span>Photographs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="headdressesandheadgear.html">Headdresses &amp; Headgear</a></li>
-            <li><a href="gallery.html">Clothing</a></li>
-            <li><a href="gallery.html">Footwear</a></li>
-            <li><a href="gallery.html">Jewelry &amp; Adornment</a></li>
-            <li><a href="gallery.html">Bags, Belts &amp; Sashes</a></li>
-            <li><a href="gallery.html">Ceremony, Dance &amp; Medicine</a></li>
-            <li><a href="gallery.html">Household, Travel &amp; Tools</a></li>
-            <li><a href="gallery.html">Tipis</a></li>
-            <li><a href="gallery.html">Games</a></li>
-             <li><a href="gallery.html">Community</a></li>
+            <li><a href="headdressesandheadgear.html" class="active">Headdresses &amp; Headgear</a></li>
+            <li><a href="headdressesandheadgear.html">Clothing</a></li>
+            <li><a href="headdressesandheadgear.html">Footwear</a></li>
+            <li><a href="headdressesandheadgear.html">Jewelry &amp; Adornment</a></li>
+            <li><a href="headdressesandheadgear.html">Bags, Belts &amp; Sashes</a></li>
+            <li><a href="headdressesandheadgear.html">Ceremony, Dance &amp; Medicine</a></li>
+            <li><a href="headdressesandheadgear.html">Household, Travel &amp; Tools</a></li>
+            <li><a href="headdressesandheadgear.html">Tipis</a></li>
+            <li><a href="headdressesandheadgear.html">Games</a></li>
+            <li><a href="headdressesandheadgear.html">Community</a></li>
           </ul>
         </li>
-    <li><a href="contact.html">Oral History </a></li>
+    <li><a href="history.html">History </a></li>
+         <li><a href="veterans.html">Veterans </a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -86,130 +233,207 @@
   </div>
 </header>
 
+<main class="main">
+  
+<!-- ===== Photographs Hero (single, cohesive) ===== -->
+<section class="photo-title-band">
+  <div class="container" data-aos="fade-up">
+    <h1 class="photo-title">Headdresses and Headgear</h1>
+    <p class="photo-note">
+      Some culturally sensitive items are described but not displayed.
+    </p>
+  </div>
+</section>
 
 
-  <main class="main">
-    <!-- Hero -->
-    <section id="-about-hero" class="hero section"  style="
-    background:
-      linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)),
-      url('assets/img/featured/backrest.png') center / cover no-repeat;
-    padding: 96px 0;
-    color: #fff;
-    border-top: none;
-  ">
+<!-- ===== Category heading (optional, keeps your vibe) ===== -->
 
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-9 text-center" data-aos="fade-up" data-aos-delay="100">
-              <div class="hero-text-panel">
-            <h3 style="color: var(--pee-green);">
-              Gallery 
-            </h3>
-            <p class="mt-3 lead">
-         Click on a photo to see the description
-            </p>
-       
-            <small class="text-muted d-block mt-3">
-              Courtesy of the Smithsonian’s National Museum of the American Indian.
-            </small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Page Title -->
+
+
+  <!-- KEEP THIS EXACT ID -->
+  <section id="gallery" class="gallery section">
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- optional heading above your existing grid -->
+  
+
+      <div class="row gy-4 justify-content-center">
+
+        <!-- KEEP YOUR EXISTING GALLERY ITEMS FROM HERE DOWN -->
+        <!-- (paste your current col-xl-3 blocks here) -->
+<section id="browse" class="photo-browse-head">
+  <div class="container text-center" data-aos="fade-up">
+    <h2 class="photo-browse-title">Click on a Photo</h2>
+    <p class="photo-browse-sub">Read about its story</p>
+  </div></section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
+  
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+   
 
         <div class="row gy-4 justify-content-center">
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/museum_icons/fieldmuseum.png" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-1.jpg" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="photographs.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
+<div class="col-xl-3 col-lg-4 col-md-6">
+  <div class="gallery-item h-100 fancy-caption-center">
+    <img src="assets/img/featured/headdress.png" class="img-fluid" alt="">
+
+    <div class="gallery-caption-center">
+      Headdresses and Headgear
+    </div>
+
+    <div class="gallery-links d-flex align-items-center justify-content-center">
+      <a href="assets/img/gallery/gallery-1.jpg" title="Gallery 1" class="glightbox preview-link">
+        <i class="bi bi-arrows-angle-expand"></i>
+      </a>
+      <a href="headdressesandheadgear.html" class="details-link">
+        <i class="bi bi-link-45deg"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/museum_icons/glenbow_museum.png" class="img-fluid" alt="">
+              <img src="assets/img/featured/clothing.png" class="img-fluid" alt="">
+                  <div class="gallery-caption-center">
+      Clothing
+    </div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-2.jpg" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="photographs.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/museum_icons/manitoba_museum.jpg" class="img-fluid" alt="">
+              <img src="assets/img/featured/moccassins.png" class="img-fluid" alt="">
+                  <div class="gallery-caption-center">
+      Footwear
+    </div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-3.jpg" title="Gallery 3" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="photographs.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/museum_icons/royal_ontario_museum.jpg" class="img-fluid" alt="">
+              <img src="assets/img/featured/jewellery.png" class="img-fluid" alt="">
+                  <div class="gallery-caption-center">
+      Jewelry and Adornment 
+    </div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-4.jpg" title="Gallery 4" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="photographs.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/museum_icons/smithsonian_logo.png" class="img-fluid" alt="">
+              <img src="assets/img/featured/belt.png" class="img-fluid" alt="">
+                   <div class="gallery-caption-center">
+      Bags, Belts, and Sashes 
+    </div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-5.jpg" title="Gallery 5" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="photographs.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt="">
+              <img src="assets/img/featured/medicine_bag.png" class="img-fluid" alt="">
+                              <div class="gallery-caption-center">
+      Ceremony, Dance, and Medicine
+    </div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-6.jpg" title="Gallery 6" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="photographs.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt="">
+              <img src="assets/img/featured/tool_firestarting_steel_with_fur_strap.png" class="img-fluid" alt="">
+                 <div class="gallery-caption-center">
+      Household, Travel, and Tools
+    </div>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-7.jpg" title="Gallery 7" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="photographs.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-8-2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/featured/tipi_with_people.png" class="img-fluid" alt="">
+                     <div class="gallery-caption-center">
+      Tipis
+    </div>
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/gallery-8-2.jpg" title="Gallery 8" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div><!-- End Gallery Item -->
+          
+              <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="assets/img/featured/handgame_and_bowl.png" class="img-fluid" alt="">
+                     <div class="gallery-caption-center">
+      Games
+    </div>
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/gallery-5.jpg" title="Gallery 5" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="assets/img/featured/community_man_with_cigarette.png" class="img-fluid" alt="">
+                     <div class="gallery-caption-center">
+      Community
+    </div>
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/gallery-6.jpg" title="Gallery 6" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="assets/img/featured/tool_firestarting_steel_with_fur_strap.png" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="assets/img/gallery/gallery-7.jpg" title="Gallery 7" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="headdressesandheadgear.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div><!-- End Gallery Item -->
+   <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="assets/img/featured/tipi_with_people.png" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/gallery/gallery-8-2.jpg" title="Gallery 8" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
-
         </div>
 
       </div>
-
+    </div>
     </section><!-- /Gallery Section -->
 
   </main>

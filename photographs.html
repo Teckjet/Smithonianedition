@@ -33,13 +33,59 @@
   <style>
     .border-pee { border-color: var(--pee-green) !important; }
     
-    .gallery .gallery-item img {
-      filter: brightness(45%); /* adjust up/down if you want darker or lighter */
-      transition: 0.3s ease;}
+/* ===== Museum overlay (keeps photo true, improves readability) ===== */
 
-/* Option: remove the darker filter when hovered */
-    .gallery .gallery-item:hover img {
-      filter: brightness(80%);}
+/* Make sure overlay can sit on top of the image */
+.gallery .gallery-item{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft museum gradient overlay ON TOP of the photo */
+.gallery .gallery-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: 1;
+
+  /* warm + dark edges like museum sites */
+  background:
+    radial-gradient(circle at 50% 40%, rgba(0,0,0,.10), rgba(0,0,0,.55)),
+    linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
+
+  opacity: .85;
+  transition: opacity .35s ease;
+  pointer-events:none;
+}
+
+/* Keep image below overlay */
+.gallery .gallery-item img{
+  display:block;
+  width:100%;
+  height:auto;
+  transform: scale(1.01);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+/* Caption should sit ABOVE overlay */
+.gallery-caption-center{
+  z-index: 2;
+}
+
+/* The clickable icons overlay should be on top too */
+.gallery .gallery-links{
+  z-index: 3;
+}
+
+/* Hover: reveal more photo + subtle lift */
+.gallery .gallery-item:hover::before{
+  opacity: .55;
+}
+.gallery .gallery-item:hover img{
+  transform: scale(1.04);
+}
+
+
 
     /* Fancy overlay caption for gallery items */
 /* Centered overlay caption */
@@ -75,12 +121,16 @@
 
 /* Apply vintage font to key text on THIS page only */
 
+/* Apply vintage font to key text on THIS page only */
 .hero-text-panel h3,
 .hero-text-panel p,
 .hero-text-panel small,
-.navmenu > ul > li > a ,
 .section h2,
-.section h3,
+.section h3 {
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 2px;
+}
+
 
 
 /* -------- Style A: Elegant Museum Title for H1 -------- */
@@ -132,41 +182,50 @@
   </style>
 </head>
 
+
 <body class="index-page">
 
   <!-- Header (background & nav colors are controlled in main.css overrides) -->
-<header class="header">
+<header class="header header-photo">
+  <div class="header-bg" style="background-image:url('assets/img/featured/peepeekisis_sign_from_far.jpg');"></div>
+  <div class="header-overlay"></div>
+
   <div class="container">
-   <h1 class="site-title with-flag">   
-       <a href="index.html" class="site-title-link">
-  <img
-    src="assets/img/Peepeekisis-Flag.png"
-    alt="Peepeekisis Cree Nation flag"
-    class="site-flag"
-    width="56" height="36"
-    loading="lazy" decoding="async" />
-         <span>Peepeekisis Cree Nation Virtual Archieves And Museum</span></a>
-</h1>
+ <a href="index.html" class="site-crest" aria-label="Peepeekisis Cree Nation Home">
+      <img
+        src="assets/img/Peepeekisis-Flag.png"
+        alt="Peepeekisis Cree Nation Flag"
+      />
+    </a>
+
+    <!-- Title -->
+    <h1 class="site-title">
+      <a href="index.html">
+        Peepeekisis Cree Nation Virtual Archives And Museum
+      </a>
+    </h1>
+
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="index.html" >Home</a></li>
-        <li><a href="about.html" >About</a></li>
+        <li><a href="about.html">About</a></li>
         <li class="dropdown">
           <a href="photographs.html" class="active"><span>Photographs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="headdressesandheadgear.html">Headdresses &amp; Headgear</a></li>
-            <li><a href="gallery.html">Clothing</a></li>
-            <li><a href="gallery.html">Footwear</a></li>
-            <li><a href="gallery.html">Jewelry &amp; Adornment</a></li>
-            <li><a href="gallery.html">Bags, Belts &amp; Sashes</a></li>
-            <li><a href="gallery.html">Ceremony, Dance &amp; Medicine</a></li>
-            <li><a href="gallery.html">Household, Travel &amp; Tools</a></li>
-            <li><a href="gallery.html">Tipis</a></li>
-            <li><a href="gallery.html">Games</a></li>
-             <li><a href="gallery.html">Community</a></li>
+            <li><a href="headdressesandheadgear.html">Clothing</a></li>
+            <li><a href="headdressesandheadgear.html">Footwear</a></li>
+            <li><a href="headdressesandheadgear.html">Jewelry &amp; Adornment</a></li>
+            <li><a href="headdressesandheadgear.html">Bags, Belts &amp; Sashes</a></li>
+            <li><a href="headdressesandheadgear.html">Ceremony, Dance &amp; Medicine</a></li>
+            <li><a href="headdressesandheadgear.html">Household, Travel &amp; Tools</a></li>
+            <li><a href="headdressesandheadgear.html">Tipis</a></li>
+            <li><a href="headdressesandheadgear.html">Games</a></li>
+            <li><a href="headdressesandheadgear.html">Community</a></li>
           </ul>
         </li>
-    <li><a href="contact.html">Oral History </a></li>
+    <li><a href="history.html">History </a></li>
+         <li><a href="veterans.html">Veterans </a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -174,43 +233,44 @@
   </div>
 </header>
 
+<main class="main">
+  
+<!-- ===== Photographs Hero (single, cohesive) ===== -->
+<section class="photo-title-band">
+  <div class="container" data-aos="fade-up">
+    <h1 class="photo-title">Photographs</h1>
+    <p class="photo-note">
+      Some culturally sensitive items are described but not displayed.
+    </p>
+  </div>
+</section>
 
 
-  <main class="main">
-    <!-- Hero -->
-    <section id="-about-hero" class="hero section"  style="
-    background:
-      linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)),
-      url('assets/img/featured/backrest.png') center / cover no-repeat;
-    padding: 96px 0;
-    color: #fff;
-    border-top: none;
-  ">
+<!-- ===== Category heading (optional, keeps your vibe) ===== -->
 
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-9 text-center" data-aos="fade-up" data-aos-delay="100">
-              <div class="hero-text-panel">
-            <h3 style="color: var(--pee-green);">
-              Gallery 
-            </h3>
-            <p class="mt-3 lead">
-         Click on a photo to see the description
-            </p>
-       
-            <small class="text-muted d-block mt-3">
-              Medicine Bags are found under the Medicine Category
-            </small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Page Title -->
+
+
+  <!-- KEEP THIS EXACT ID -->
+  <section id="gallery" class="gallery section">
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- optional heading above your existing grid -->
+  
+
+      <div class="row gy-4 justify-content-center">
+
+        <!-- KEEP YOUR EXISTING GALLERY ITEMS FROM HERE DOWN -->
+        <!-- (paste your current col-xl-3 blocks here) -->
+<section id="browse" class="photo-browse-head">
+  <div class="container text-center" data-aos="fade-up">
+    <h2 class="photo-browse-title">Browse by Category</h2>
+    <p class="photo-browse-sub">Choose a collection to explore.</p>
+  </div></section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery section bg-darkfade">
+  
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+   
 
         <div class="row gy-4 justify-content-center">
 
