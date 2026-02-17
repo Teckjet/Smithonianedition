@@ -545,7 +545,7 @@ function closeModal() {
     });
   }
 
-  fetch("data.json?t=" + Date.now())
+  fetch("footwear.json?t=" + Date.now())
     .then((r) => r.json())
     .then((data) => buildGallery(data))
     .catch((err) => console.error("Gallery Error:", err));

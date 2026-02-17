@@ -1,0 +1,104 @@
+[
+  {
+    "src": "assets/img/headdresses/mans_fur_hat.png",
+    "id": "15024",
+    "title": "Man's Fur War Cap",
+    "desc": "Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/headdresses/headdress_made_of_red_fox_fur.png",
+    "id": "84335",
+    "title": "Hat Made Of Red Fox Fur",
+    "desc": "Front Ornamented with imitation Sun Dance Whistle, grouse feathers attached, worn in medicine dance; Accession Year: 1903; Accession Number: 851; Collected by:Stephen C. Simms; Collection Site: Saskatchewan, Touchwood Hills Agency, Day Star Reserve; Courtesy of Chicago Field Museum"
+  },
+    {
+    "src": "assets/img/headdresses/mans_fur_winter_hat.png",
+      "id": "15019",
+    "title": "Man's Fur Winter Hat",
+    "desc": "Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/headdresses/infant_boys_buckskin_hood.png",
+    "id": "15014",
+    "title": "Infant Boy's Buckskin Hood",
+    "desc": "Bordered with fur; Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/headdresses/infant_bonnet.png",
+    "id": "15007",
+    "title": "Infant Girl's Buckskin Bonnet",
+    "desc": "Beaded fringe to keep off flies; Accession Year: 1893,Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/headdresses/headdress_of_hawk_feathers.png",
+     "id": "15050",
+    "title": "Headdress of Hawk Feathers",
+    "desc": "Accession Year: 1893; Accession Number: 23; Collected by: E. F. Wilson; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Musuem"
+  },
+ {
+    "src": "assets/img/headdresses/womens_buckskin_hood.png",
+     "id": "15010",
+    "title": "Women's Buckskin Hood",
+    "desc": "Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/headdresses/medicine_dance_hat.png",
+    "id": "84293",
+    "title": "Medicine Dance Hat",
+    "desc": "Made of Long Crow Feathers, each tipped with a small piece of ermine skin. Central feather tipped with red feather.Feathers attached to cloth hat; Accession Year: 1903; Accession Number: 851; Collected by: Stephen C. Simms; Collection Site: Saskatchewan, Touchwood Hills Agency, Poor Man’s Reserve; Courtesy of Chicago Field Museum"
+  },
+ {
+    "src": "assets/img/headdresses/headdress_made_of_feathers_with_animal_claws_attached.png",
+    "id": "147946",
+    "title": "Headdress made of feathers with animal claws attached",
+    "desc": "Headdress of red cloth decorated with feathers, bead and quill and bear claws; Accession Number: 147946; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+{
+  "id": "147957",
+  "title": "Eagle feather headdress",
+  "desc": "Eagle feather headdress. Wool cloth, Sewn, Overlay beadwork, Ermine skin/fur, Glass bead/beads;  Photos by Katherine Fogden and Karen Furth; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian",
+  "src": "assets/img/headdresses/headdress_made_of_eagle_feathers.png",
+  "images": [
+    "assets/img/headdresses/headdress_made_of_eagle_feathers.png",
+    "assets/img/headdresses/headdress_made_of_eagle_feathers_close_up.png",
+    "assets/img/headdresses/headdress_made_of_eagle_feathers_other_angle.png"
+  ]
+},
+ {
+    "src": "assets/img/headdresses/headdress_made_of_two_different_styles_of_eagle_feathers.png",
+    "id": "147963",
+    "title": "Eagle feather headdress with Hair",
+    "desc": "Wool cloth, Hide, Hair, Sewn, Overlay beadwork, Ermine skin/fur, Glass bead/beads; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+   {
+    "src": "assets/img/headdresses/headdress_with_container_case.png",
+    "id": "147972",
+    "title": "Headdress with Container Case",
+    "desc": "Buffalo skin cover containing a headdress of red and blue cloth decorated with buffalo horns; fur, feathers, and quill and bead work; buffalo felt; a bird skin mounted on bark; and two feathers; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+ {
+    "src": "assets/img/headdresses/headdress_image_not_displayed.png",
+    "id": "148015",
+    "title": "Headdress (Image Not Displayed)",
+    "desc": "Hide, Sewn, Eagle Feather(s), Glass bead/beads; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+   {
+    "src": "assets/img/headdresses/headdress_made_of_wolf_fur.png",
+    "id": "148015",
+    "title": "Headdress Made Of Wolf Fur With Eagle Feathers Attached",
+    "desc": "Wolf skin headdress decorated with feathers and metal bells used by scout in enemy's country; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+ {
+    "src": "assets/img/headdresses/headdress_made_of_badger_skin.png",
+    "id": "148023",
+    "title": "Headdress Made Of Badger Skin",
+    "desc": "Sewn, Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Culture: Plains Cree; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+   {
+    "src": "assets/img/headdresses/roach_for_head.png",
+    "id": "147980",
+    "title": "Roach with Beaded Pendant & Storage Stick",
+    "desc": "Materials: Horsehair, Ermine skin, Wood, Hide thong/Babiche; Techniques: Loom Beadwork, Stitched, Dyed, Tied, Carved; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  }
+
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "src": "assets/img/clothing/rabbit_skin_robe.png",
+    "id": "15082",
+    "title": "Rabbit Skin Robe",
+    "desc": "Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/clothing/mens_buckskin_hunting_shirt.png",
+    "id": "15074",
+    "title": "Man's Buckskin Hunting Shirt",
+    "desc": "Plain with exception of buckskin fringes. Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+    {
+    "src": "assets/img/clothing/womans_painted_buffalo_robe.png",
+      "id": "15052",
+    "title": "Woman's Painted Buffalo Robe",
+    "desc": "Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/clothing/childs_buffalo_robe_ornamented_with_porcupine_quills.png",
+    "id": "15041",
+    "title": "Child's Buffalo Robe Ornamented With Porcupine Quills",
+    "desc": "Tested Positive for Arsenic; Accession Year: 1894; Accession Number: 112; Collected by: Edward E. Ayer; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/clothing/buffalo_robe.png",
+    "id": "15038",
+    "title": "Mans Painted Buffalo Robe",
+    "desc": "Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/clothing/war_shirt.png",
+     "id": "15008",
+    "title": "War Shirt",
+    "desc": "Mans buckskin coat, Ornamented with buckskin fringe and scalp locks. Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+ {
+    "src": "assets/img/clothing/medicine_mans_shirt.png",
+     "id": "15006",
+    "title": "Medicine Man's Shirt",
+    "desc": "Buckskin medicine shirt, peforated with holes. Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/clothing/dress.png",
+    "id": "15005",
+    "title": "Women's Buckskin Dress",
+    "desc": "Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+ {
+    "src": "assets/img/clothing/muskrat_skin_robe.png",
+    "id": "84292",
+    "title": "Muskrat Skin Robe",
+    "desc": "Robe of woven muskrat skins; Acquisition Source: Stephen C. Simms; Assession Number: 851; Assession Year: 1903; Collection Site: Saskatchewan, Touchwood Agency, Poor Man’s Reserve; Courtesy of the Chicago Field Museum"
+  },
+{
+  "id": "147938",
+  "title": "Capote",
+  "desc": "Coat and hood made of Hudson Bay Company blanket. Wool cloth, Sewn; Culture: Prairie Cree; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian",
+  "src": "assets/img/clothing/Capote_1.png",
+  "images": [
+    "assets/img/clothing/Capote_1.png",
+    "assets/img/clothing/Capote_2.png"
+  ]
+},
+ {
+    "src": "assets/img/clothing/buckskin_shirt.png",
+    "id": "84290",
+    "title": "Buckskin Shirt",
+    "desc": "Buckskin Shirt, tail sides and underedges of sleeves are fringed. Broad beaded band down each sleeve.Pendants of ermine skins. Broad beaded yoke, front, over shoulders and down back; Acquisition Source: Stephen C. Simms; Assession Number: 851; Assession Year: 1903; Collection Site: Day Star Reserve; Courtesy of the Chicago Field Museum"
+  },
+   {
+    "src": "assets/img/clothing/womans_cape.png",
+    "id": "148028",
+    "title": "Woman's cape/overblouse",
+    "desc": "Beaded dress cover for woman; Cotton canvas, glass beads, hide thong/ Babiche; Techniques: Sewn, Overlay beadwork, Gourd stitch/ brick stitch/ Netted beadwork; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+ {
+    "src": "assets/img/clothing/robe_image_not_displayed.png",
+    "id": "147939",
+    "title": "Robe (Image Not Displayed)",
+    "desc": "Image withheld due to Cultural Sensitivity; Materials: Horse hide/skin (colt),Ermine skin/fur, cotton cloth, horsehair; Sewn; Culture: Plains / Prairie Cree; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+   {
+    "src": "assets/img/clothing/robe_image_not_displayed_2.png",
+    "id": "147978",
+    "title": "Robe (Image Not Displayed)",
+    "desc": "Image withheld due to Cultural Sensitivity; Materials: Buffalo hide/ skin (calf), wool cloth, feather/ feathers, brass bells; Sewn; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+ {
+    "id": "147958",
+    "title": "Moose skin coat decorated with bead work and leggings",
+    "desc": "Materials: Glass beads, buttons; Techniques: Cut, Sewn, Lazy/lane stitch beadwork,overlay beadwork,fringed; Acquisition Source: Cadzow, Donald A.; Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian",
+    "src": "assets/img/clothing/mans_mooseskin_coat_goes_with_leggings_147958.png",
+    "images": [
+      "assets/img/clothing/mans_mooseskin_coat_goes_with_leggings_147958.png",
+      "assets/img/footwear/moose_skin_leggings_that_go_with_coat_file_number_147958.png"
+    ]
+  },
+   {
+    "src": "assets/img/clothing/mens_pants_image_not_displayed.png",
+    "id": "147984",
+    "title": "Mens Pants",
+    "desc": "Photo withheld due to cultural sensitivity; Materials: Cotton cloth, Wool cloth, glass beads; Techniques: Sewn, Appliqued, Overlay beadwork, Fringed; Acquisition Source: Cadzow, Donald A. (Collector & MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  }
+
+]
