@@ -21,6 +21,250 @@
   <link href="assets/css/main.css" rel="stylesheet" />
 
   <link rel="icon" type="image/png" href="assets/img/Peepeekisis-Flag.png" />
+ <style>
+  :root {
+  --cream: #f1e2c5;
+  --brownbar: #55504d;
+  --museum: #1a1a1a;
+  --panel: rgba(43, 38, 33, 0.88);
+}
+
+/* General veterans page spacing */
+.section {
+  padding: 60px 0;
+}
+
+.section p {
+  max-width: 75ch;
+  line-height: 1.7;
+}
+
+/* Gallery */
+.masonry-gallery {
+  column-count: 4;
+  column-gap: 15px;
+  padding: 24px;
+  background: #111;
+  border-radius: 14px;
+}
+
+@media (max-width: 1200px) {
+  .masonry-gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+.item {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 15px;
+  cursor: pointer;
+  position: relative;
+  background: #1a1512;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(241, 226, 197, 0.18);
+  box-shadow: 0 4px 8px rgba(0,0,0,.35);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.item img {
+  width: 100%;
+  display: block;
+  filter: grayscale(18%) brightness(90%);
+  transition: filter .35s ease;
+}
+
+.item:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(241,226,197,.65);
+  box-shadow: 0 18px 34px rgba(0,0,0,.55);
+}
+
+.item:hover img {
+  filter: grayscale(0%) brightness(110%);
+}
+
+.exhibit-label {
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,.9), transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.item:hover .exhibit-label {
+  opacity: 1;
+}
+
+.artifact-title {
+  display: block;
+  font-family: "IM Fell English SC", serif;
+  font-size: .95rem;
+  color: var(--cream);
+  letter-spacing: 1px;
+}
+
+.artifact-desc {
+  display: block;
+  font-size: .78rem;
+  color: rgba(241,226,197,.82);
+}
+
+/* Divider sections between eras */
+.veteran-divider {
+  position: relative;
+  background: #1a1a1a;
+  color: var(--cream);
+  padding: 55px 0;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(241,226,197,.25);
+  border-bottom: 1px solid rgba(241,226,197,.25);
+}
+
+.veteran-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("assets/img/veterans/veterans_hall.png");
+  background-size: cover;
+  background-position: center;
+  opacity: .35;
+}
+
+.veteran-divider .container {
+  position: relative;
+  z-index: 2;
+}
+
+.veteran-divider h2 {
+  font-family: "IM Fell English SC", serif;
+  color: var(--cream);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.veteran-divider p {
+  color: rgba(241,226,197,.9);
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+
+/* Modal */
+.museum-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: var(--brownbar);
+  justify-content: center;
+  align-items: center;
+  padding: 26px 16px;
+}
+
+.museum-modal.is-open {
+  display: flex;
+}
+
+.museum-close {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  color: var(--cream);
+  font-size: 52px;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.museum-close:hover {
+  color: #fff;
+}
+
+.museum-modal-content {
+  max-width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: museumFade .25s ease-out;
+}
+
+@keyframes museumFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#modalImg {
+  max-width: 92vw;
+  max-height: 68vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--cream);
+  background: #000;
+  box-shadow: 0 10px 40px rgba(0,0,0,.8);
+}
+
+#caption {
+  width: 100%;
+  max-width: 950px;
+  margin-top: 10px;
+  padding: 18px 18px 20px;
+  background: var(--panel);
+  border-radius: 0 0 10px 10px;
+  color: var(--cream);
+  text-align: center;
+}
+
+#caption h2 {
+  margin: 0 0 8px;
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+#caption p {
+  margin: 0;
+  opacity: .9;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+   .museum-modal {
+  display: none;
+}
+
+.museum-modal.is-open {
+  display: flex;
+}
+  </style>
 </head>
 
 <body class="about-page">
@@ -74,51 +318,98 @@
 </header>
 
 <!-- ================= MAIN ================= -->
+
+<!-- ================= MAIN ================= -->
 <main class="main">
 
   <!-- Page Intro -->
   <section class="photo-title-band">
-    <div class="container " data-aos="fade-up">
-      <h1 class="photo-title">
-        Veterans</h1>
-        <p class='photo-note'>Honouring service, sacrifice, and remembrance</p>
-    
+    <div class="container" data-aos="fade-up">
+      <h1 class="photo-title">Veterans</h1>
+      <p class="photo-note">
+        Honouring service, sacrifice, and remembrance
+      </p>
     </div>
   </section>
 
-  <!-- Veterans Content -->
+  <!-- Veterans Intro -->
   <section class="section">
     <div class="container">
 
       <div class="row align-items-center g-5">
 
-        <!-- Image -->
+        <!-- Images -->
         <div class="col-lg-6" data-aos="fade-right">
+
           <img
             src="assets/img/veterans/veterans_hall.png"
             alt="Peepeekisis Cree Nation Veterans"
+            class="img-fluid rounded-4 border border-pee shadow-sm mb-4"
+          />
+
+          <img
+            src="assets/img/veterans/memorial_statue.png"
+            alt="Veterans Memorial Statue"
             class="img-fluid rounded-4 border border-pee shadow-sm"
           />
+
         </div>
 
         <!-- Text -->
         <div class="col-lg-6" data-aos="fade-left">
-          <h2 class="pee-vintage text-pee-green">In Honour and Remembrance</h2>
+
+          <h2 class="pee-vintage text-pee-green">
+            Our Peepeekisis Veterans
+          </h2>
 
           <p>
-            This section recognizes members of the Peepeekisis Cree Nation who
-            served in times of war and peace, as well as the families and community
-            members who supported them.
+            There are over 80 war time veterans from Peepeekisis who served in
+            World War 1, World War 2, and Korea. These veterans had Treaty
+            rights that excluded them from fighting in foreign wars. They made
+            a choice to volunteer to enlist despite the fact they were not
+            Canadian citizens.
           </p>
 
           <p>
-            Veterans’ service reflects courage, responsibility, and commitment.
-            Their stories form an important part of community history and memory.
+            Indian people in Canada lived under apartheid with a pass system in
+            place until 1940 and an agricultural permit system in place until
+            1968. These veterans grew up in the Indian residential school
+            system, and were denied Canadian citizenship until 1960.
           </p>
 
           <p>
-            As this archive grows, photographs, records, and oral histories related
-            to Peepeekisis veterans will be preserved here with care and respect.
+            Peepeekisis men and women participated in World War I (1914-1918)
+            and World War II (1939-1945), including Dieppe and the pivotal
+            Normandy Beach landing invasion. They were also present at the
+            Korean War of 1950-1953 and continued in many peace time efforts to
+            serve Canada.
+          </p>
+
+          <p>
+            Their wartime contributions created positive changes in the lives
+            of all Indian people.
+          </p>
+
+          <h2 class="pee-vintage text-pee-green mt-5">
+            The Warrior Tradition
+          </h2>
+
+          <p>
+            The Peepeekisis band can be traced to the Calling River or
+            Qu’Appelle Cree. The band was first known as the Ready the Bow
+            Band, after its leader who signed Treaty in 1874.
+          </p>
+
+          <p>
+            In 1866, 900 lodges of Cree and Saulteaux led by Day Star, Ready
+            Bow, and Little Black Bear repelled the Blackfoot at Red Ochre Hill
+            near Swift Current.
+          </p>
+
+          <p>
+            Reports of this battle between the Blackfeet and the Cree at Red
+            Ochre Hills on the South Saskatchewan state that six hundred
+            Blackfeet were slain.
           </p>
 
         </div>
@@ -127,39 +418,220 @@
     </div>
   </section>
 
-  <!-- Veterans Purpose / Future Content -->
+  <!-- Divider -->
+  <section class="veteran-divider">
+    <div class="overlay"></div>
+    <div class="container text-center">
+      <h2>World War I</h2>
+      <p>1914 – 1918</p>
+    </div>
+  </section>
+
+  <!-- WWI -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="pee-vintage text-pee-green text-center mb-4">
+        World War I
+      </h2>
+
+      <p class="text-center mb-5">
+        Indian people across the prairies were interested in the Great War but
+        English was a basic requirement for service and it served as a barrier.
+      </p>
+
+      <div id="ww1Gallery" class="masonry-gallery"></div>
+
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <section class="veteran-divider">
+    <div class="overlay"></div>
+    <div class="container text-center">
+      <h2>World War II</h2>
+      <p>1939 – 1945</p>
+    </div>
+  </section>
+
+  <!-- WWII -->
   <section class="section light-background">
     <div class="container">
 
-      <div class="feature-grid">
+      <h2 class="pee-vintage text-pee-green text-center mb-4">
+        World War II
+      </h2>
 
-        <div class="feature-copy">
-          <h3>Veterans Stories</h3>
+      <p class="text-center mb-5">
+        In 1939 when Canada entered the war effort, Peepeekisis band members
+        again responded in huge numbers.
+      </p>
 
-          <p>
-            This section will include individual veteran profiles, oral history
-            recordings, and memorial materials when they become available.
-          </p>
-
-          <p>
-            Some information may be restricted or shared only with permission,
-            in accordance with community guidance and cultural protocols.
-          </p>
-        </div>
-
-        <div class="feature-media">
-          <img
-            src="assets/img/veterans/brass_tombstone.jpeg"
-            alt="Veterans memorial or archival material"
-          />
-        </div>
-
-      </div>
+      <div id="ww2Gallery" class="masonry-gallery"></div>
 
     </div>
   </section>
 
+  <!-- Divider -->
+  <section class="veteran-divider">
+    <div class="overlay"></div>
+    <div class="container text-center">
+      <h2>Korean War</h2>
+      <p>1950 – 1953</p>
+    </div>
+  </section>
+
+  <!-- Korea -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="pee-vintage text-pee-green text-center mb-4">
+        Korean War
+      </h2>
+
+      <div id="koreaGallery" class="masonry-gallery"></div>
+
+    </div>
+  </section>
+
+  <!-- Peacetime -->
+  <section class="section light-background">
+    <div class="container">
+
+      <h2 class="pee-vintage text-pee-green text-center mb-4">
+        Peacetime Service
+      </h2>
+
+      <p class="text-center">
+        Veterans who served in peacetime and their contributions.
+      </p>
+
+      <div id="peacetimeGallery" class="masonry-gallery"></div>
+
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div
+    id="imageModal"
+    class="museum-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Veterans photo viewer"
+  >
+
+    <span class="museum-close" aria-label="Close">&times;</span>
+
+
+    <div class="museum-modal-content">
+
+      <img id="modalImg" src="" alt="Veterans photo" />
+
+      <div id="caption"></div>
+
+    </div>
+
+  </div>
+
 </main>
+
+<script>
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const caption = document.getElementById("caption");
+
+const closeBtn = document.querySelector(".museum-close");
+
+function openModal(item) {
+  modal.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+
+  modalImg.src = item.src || "";
+  modalImg.alt = item.title || "Veterans photo";
+
+  caption.innerHTML = `
+    <h2>${item.title || ""}</h2>
+    <p>${item.desc || ""}</p>
+  `;
+}
+
+function closeModal() {
+  modal.classList.remove("is-open");
+  modalImg.src = "";
+  caption.innerHTML = "";
+  document.body.style.overflow = "";
+}
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", closeModal);
+}
+
+if (modal) {
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+}
+
+window.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
+
+function buildGalleryIn(containerId, data) {
+
+  const gallery = document.getElementById(containerId);
+
+  if (!gallery) return;
+
+  gallery.innerHTML = "";
+
+  data.forEach((item) => {
+
+    if (!item.src) return;
+
+    const div = document.createElement("div");
+
+    div.className = "item";
+
+    div.innerHTML = `
+      <img src="${item.src}" alt="${item.title || ""}" loading="lazy">
+
+      <div class="exhibit-label">
+        <span class="artifact-title">${item.title || ""}</span>
+        <span class="artifact-desc">${item.desc || ""}</span>
+      </div>
+    `;
+
+    div.addEventListener("click", () => openModal(item));
+
+    gallery.appendChild(div);
+
+  });
+}
+
+function loadGallery(jsonFile, containerId) {
+
+  fetch(jsonFile + "?t=" + Date.now())
+    .then((r) => r.json())
+    .then((data) => buildGalleryIn(containerId, data))
+    .catch((err) => console.error(err));
+
+}
+
+loadGallery("FH_veterans_ww1.json", "ww1Gallery");
+loadGallery("FH_veterans_ww2.json", "ww2Gallery");
+loadGallery("FH_veterans_korea.json", "koreaGallery");
+loadGallery("FH_veterans_peacetime.json", "peacetimeGallery");
+</script>
+
+
+  
+
+  <!-- Veterans Purpose / Future Content -->
+
 
 
 <!-- ================= FOOTER ================= -->
