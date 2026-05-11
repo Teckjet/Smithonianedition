@@ -21,229 +21,84 @@
   <link href="assets/css/main.css" rel="stylesheet" />
 
   <link rel="icon" type="image/png" href="assets/img/Peepeekisis-Flag.png" />
-<style>
-:root {
+ <style>
+  :root {
   --cream: #f1e2c5;
-  --museum: #111;
+  --brownbar: #55504d;
+  --museum: #1a1a1a;
   --panel: rgba(43, 38, 33, 0.88);
-  --paper: #f3eadb;
-  --brown: #2a1c12;
 }
 
-/* =========================
-   PAGE BASE
-========================= */
-
-body.about-page {
-  background: var(--paper);
+/* General veterans page spacing */
+.section {
+  padding: 45px 0;
 }
-
-.section,
 .section.light-background {
   padding: 45px 0;
 }
-
 .section p {
   max-width: 75ch;
   line-height: 1.7;
 }
-
-/* =========================
-   VETERANS PAGE HEADER ONLY
-========================= */
-
-body.about-page .header-photo .header-bg {
-  filter:
-    sepia(22%)
-    saturate(88%)
-    brightness(88%)
-    contrast(104%);
-}
-
-body.about-page .header-overlay {
-  background:
-    linear-gradient(
-      rgba(42, 28, 18, 0.18),
-      rgba(22, 18, 8, 0.22)
-    ) !important;
-}
-
-body.about-page .site-title {
-  background: rgba(40, 28, 18, 0.34);
-  border: 1px solid rgba(241,226,197,.08);
-}
-
-body.about-page .site-title a {
-  color: var(--cream) !important;
-}
-
-body.about-page .header-photo {
-  box-shadow: inset 0 -50px 80px rgba(24,16,10,.28);
-}
-
-/* Top nav only — keeps dropdown black */
-body.about-page #navmenu > ul > li > a,
-body.about-page #navmenu > ul > li > a span,
-body.about-page #navmenu > ul > li > a i {
-  color: var(--cream) !important;
-}
-
-body.about-page #navmenu > ul > li > a:hover,
-body.about-page #navmenu > ul > li > a.active {
-  color: #ffffff !important;
-}
-
-/* Dropdown remains readable */
-body.about-page #navmenu ul ul a {
-  color: #111 !important;
-}
-
-/* =========================
-   VETERANS TITLE BAND
-========================= */
-
-body.about-page main.main .photo-title-band.veterans-title-band {
-  position: relative !important;
-  overflow: hidden;
-  padding: 65px 0 !important;
-
-  background:
-    linear-gradient(rgba(42, 28, 18, .48), rgba(20, 14, 9, .58)),
-    url("assets/img/veterans/poppies.png") !important;
-
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-
-  color: var(--cream) !important;
-  border-top: 1px solid rgba(241,226,197,.25);
-  border-bottom: 1px solid rgba(241,226,197,.25);
-  box-shadow: inset 0 -32px 48px rgba(0,0,0,.35);
-}
-
-body.about-page main.main .photo-title-band.veterans-title-band .container {
-  position: relative;
-  z-index: 2;
-  padding-left: 60px;
-}
-
-body.about-page main.main .photo-title-band.veterans-title-band .photo-title {
-  color: var(--cream) !important;
-  font-family: "IM Fell English SC", serif !important;
-  letter-spacing: 3px !important;
-  font-size: 2.6rem !important;
-}
-
-body.about-page main.main .photo-title-band.veterans-title-band .photo-note {
-  color: rgba(241,226,197,.9) !important;
-  font-size: 1.2rem !important;
-}
-
-/* =========================
-   WAR DIVIDERS
-========================= */
-
 .veteran-divider {
-  position: relative;
   padding: 38px 0;
-  text-align: center;
-  overflow: hidden;
-
-  background:
-    linear-gradient(rgba(25,17,12,.62), rgba(25,17,12,.68)),
-    url("assets/img/veterans/poppies.png");
-
-  background-size: cover;
-  background-position: center;
-  color: var(--cream);
-
-  border-top: 1px solid rgba(241,226,197,.25);
-  border-bottom: 1px solid rgba(241,226,197,.25);
 }
-
-.veteran-divider .container {
-  position: relative;
-  z-index: 2;
-}
-
-.veteran-divider h2 {
-  font-family: "IM Fell English SC", serif;
-  color: var(--cream);
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  margin-bottom: 6px;
-}
-
-.veteran-divider p {
-  color: rgba(241,226,197,.9);
-  font-size: 1.1rem;
-  margin: 0 auto;
-}
-
-/* =========================
-   MASONRY GALLERY
-========================= */
-
+/* Gallery */
 .masonry-gallery {
-  column-width: 300px;
-  column-gap: 16px;
-
-  padding: 28px;
+  column-count: 4;
+  column-gap: 15px;
+  padding: 24px;
   background: #111;
   border-radius: 14px;
+}
 
-  max-width: 100%;
-  margin: 0 auto;
+@media (max-width: 1200px) {
+  .masonry-gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
 }
 
 .item {
   display: inline-block;
   width: 100%;
-  margin: 0 0 16px;
-
+  margin: 0 0 15px;
   cursor: pointer;
   position: relative;
   background: #1a1512;
   border-radius: 6px;
   overflow: hidden;
-
   border: 1px solid rgba(241, 226, 197, 0.18);
-
-  box-shadow:
-    0 10px 24px rgba(0,0,0,.35),
-    0 2px 4px rgba(0,0,0,.18);
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,.35);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
-/* subtle scrapbook tilt */
-.item:nth-child(3n) {
-  transform: rotate(-0.6deg);
-}
-
-.item:nth-child(5n) {
-  transform: rotate(0.6deg);
+.item img {
+  width: 100%;
+  display: block;
+  filter: grayscale(18%) brightness(90%);
+  transition: filter .35s ease;
 }
 
 .item:hover {
   transform: translateY(-6px) scale(1.01);
   border-color: rgba(241,226,197,.65);
   box-shadow: 0 18px 34px rgba(0,0,0,.55);
-  z-index: 5;
-}
-
-.item img {
-  width: 100%;
-  display: block;
-  filter: grayscale(14%) brightness(92%) contrast(104%);
-  transition: filter .35s ease;
 }
 
 .item:hover img {
-  filter: grayscale(0%) brightness(108%) contrast(106%);
+  filter: grayscale(0%) brightness(110%);
 }
 
 .exhibit-label {
@@ -275,16 +130,56 @@ body.about-page main.main .photo-title-band.veterans-title-band .photo-note {
   color: rgba(241,226,197,.82);
 }
 
-/* =========================
-   MODAL
-========================= */
+/* Divider sections between eras */
+.veteran-divider {
+  position: relative;
+  background: #1a1a1a;
+  color: var(--cream);
+  padding: 38px 0;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(241,226,197,.25);
+  border-bottom: 1px solid rgba(241,226,197,.25);
+}
 
+.veteran-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,.01), rgba(0,0,0,.01)),
+    url("assets/img/veterans/poppies.png");
+  background-size: cover;
+  background-position: center;
+  opacity: .6;
+}
+
+.veteran-divider .container {
+  position: relative;
+  z-index: 2;
+}
+
+.veteran-divider h2 {
+  font-family: "IM Fell English SC", serif;
+  color: var(--cream);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.veteran-divider p {
+  color: rgba(241,226,197,.9);
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+
+/* Modal */
 .museum-modal {
   display: none;
   position: fixed;
   z-index: 9999;
   inset: 0;
-  background: rgba(45, 36, 29, .96);
+  background: var(--brownbar);
   justify-content: center;
   align-items: center;
   padding: 26px 16px;
@@ -324,7 +219,6 @@ body.about-page main.main .photo-title-band.veterans-title-band .photo-note {
     opacity: 0;
     transform: translateY(14px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -367,30 +261,157 @@ body.about-page main.main .photo-title-band.veterans-title-band .photo-note {
   line-height: 1.6;
   font-size: 1.05rem;
 }
+   .museum-modal {
+  display: none;
+}
 
-/* =========================
-   MOBILE
+.museum-modal.is-open {
+  display: flex;
+}
+   .veterans-title-band {
+  position: relative;
+  padding: 70px 0;
+  background:
+    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+    url("assets/img/veterans/poppies.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--cream);
+  border-top: 1px solid rgba(241,226,197,.25);
+  border-bottom: 1px solid rgba(241,226,197,.25);
+    
+overflow: hidden;
+}
+.veterans-title-band::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.0),
+    rgba(0,0,0,0.38)
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.veterans-title-band .photo-title {
+  color: var(--cream);
+  font-family: "IM Fell English SC", serif;
+  letter-spacing: 3px;
+  font-size: 3rem;
+}
+.header-photo {
+  box-shadow: inset 0 -60px 80px rgba(0,0,0,.45);
+}
+.veterans-title-band .photo-note {
+  color: rgba(241,226,197,.9);
+  font-size: 1.2rem;
+}
+   .veterans-title-band .container {
+  padding-left: 60px;
+      position: relative;
+  z-index: 2;
+}
+   
+   body.about-page main.main .photo-title-band.veterans-title-band {
+  position: relative !important;
+  padding: 65px 0 !important;
+  background:
+    linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.52)),
+    url("assets/img/veterans/poppies.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  color: #f1e2c5 !important;
+     box-shadow: inset 0 -40px 60px rgba(0,0,0,.45);
+}
+
+body.about-page main.main .photo-title-band.veterans-title-band .photo-title {
+  color: #f1e2c5 !important;
+  font-family: "IM Fell English SC", serif !important;
+  letter-spacing: 3px !important;
+  font-size: 2.6rem !important;
+}
+
+body.about-page main.main .photo-title-band.veterans-title-band .photo-note {
+  color: rgba(241,226,197,.9) !important;
+  font-size: 1.2rem !important;
+}
+   
+   /* =========================
+   Warm archival tone ONLY
+   keeps original image
 ========================= */
 
-@media (max-width: 800px) {
-  body.about-page main.main .photo-title-band.veterans-title-band .container {
-    padding-left: 20px;
-  }
-
-  body.about-page main.main .photo-title-band.veterans-title-band .photo-title {
-    font-size: 2.2rem !important;
-  }
-
-  .masonry-gallery {
-    column-width: 220px;
-    padding: 18px;
-  }
-
-  .veteran-divider h2 {
-    font-size: 2rem;
-  }
+body.about-page .header-photo .header-bg {
+  filter:
+    sepia(22%)
+    saturate(88%)
+    brightness(88%)
+    contrast(104%);
 }
-     /* WWI intro row */
+
+/* Slight warm overlay */
+body.about-page .header-overlay {
+  background:
+    linear-gradient(
+      rgba(42, 28, 18, 0.18),
+      rgba(22, 18, 8, 0.22)
+    ) !important;
+}
+
+/* Warm glass title bar */
+body.about-page .site-title {
+  background: rgba(40, 28, 18, 0.34);
+  border: 1px solid rgba(241,226,197,.08);
+}
+
+/* Slight warm shadow */
+body.about-page .header-photo {
+  box-shadow:
+    inset 0 -50px 80px rgba(24,16,10,.28);
+}
+   /* Match veterans cream typography */
+/* TOP navigation only */
+body.about-page #navmenu > ul > li > a,
+body.about-page #navmenu > ul > li > a span,
+body.about-page #navmenu > ul > li > a i {
+  color: #f1e2c5 !important;
+}
+
+/* Hover + active */
+body.about-page #navmenu > ul > li > a:hover,
+body.about-page #navmenu > ul > li > a.active {
+  color: #ffffff !important;
+}
+   /* Match veterans cream typography */
+body.about-page .site-title a,
+body.about-page .navmenu a {
+  color: #f1e2c5 !important;
+}
+   .item {
+  transform: rotate(0deg);
+  transition: transform .25s ease;
+}
+
+.item:nth-child(3n) {
+  transform: rotate(-1deg);
+}
+
+.item:nth-child(5n) {
+  transform: rotate(1deg);
+}
+   box-shadow:
+0 10px 24px rgba(0,0,0,.35),
+0 2px 4px rgba(0,0,0,.18);
+   
+   /* WWI intro row */
 .ww1-intro-row {
   align-items: flex-start !important;
   margin-top: -10px;
@@ -412,7 +433,7 @@ body.about-page main.main .photo-title-band.veterans-title-band .photo-note {
   line-height: 1.95;
   font-size: 1.08rem;
 }
-</style>
+  </style>
 </head>
 
 <body class="about-page">
@@ -479,7 +500,6 @@ body.about-page main.main .photo-title-band.veterans-title-band .photo-note {
       </p>
     </div>
   </section>
-
 
   <!-- Veterans Intro -->
   <section class="section">
@@ -644,7 +664,7 @@ body.about-page main.main .photo-title-band.veterans-title-band .photo-note {
     </div>
   </section>
 
- <!-- WWII -->
+  <!-- WWII -->
   <section class="section light-background">
     <div class="war-intro-text">
 
@@ -690,7 +710,7 @@ The list of casualties and death among the WW2 enlistees were high. Maurice Bell
     <div class="overlay"></div>
     <div class="container text-center">
       <h2>Peacetime</h2>
-      <p>1939 – 1945</p>
+   
     </div>
   </section>
   <!-- Peacetime -->
@@ -713,7 +733,6 @@ The list of casualties and death among the WW2 enlistees were high. Maurice Bell
       <div id="peacetimeGallery" class="masonry-gallery"></div>
 
     </div>
-  </section>
   </section>
 
   <!-- Modal -->
