@@ -551,7 +551,7 @@ function closeModal() {
     });
   }
 
-  fetch("necklaces_earrings_hair.json?t=" + Date.now())
+  fetch("breastplates.json?t=" + Date.now())
     .then((r) => r.json())
     .then((data) => buildGallery(data))
     .catch((err) => console.error("Gallery Error:", err));

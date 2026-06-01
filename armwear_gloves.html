@@ -359,7 +359,7 @@
                 <li><a href="tipis.html">Tipis</a></li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="community.html">Community</a></li>
-                <li><a href="armwear_gloves.html">Armwear &amp; Gloves </a></li>
+                <li><a href="armwear_gloves.html">Armwear &amp; Gloves</a></li>
                 <li><a href="infant_items.html">Infant Items</a></li>
                 <li><a href="bags.html">Bags</a></li>
                 <li><a href="breastplates.html">Breastplates</a></li>
@@ -551,7 +551,7 @@ function closeModal() {
     });
   }
 
-  fetch("necklaces_earrings_hair.json?t=" + Date.now())
+  fetch("armwear_gloves.json?t=" + Date.now())
     .then((r) => r.json())
     .then((data) => buildGallery(data))
     .catch((err) => console.error("Gallery Error:", err));
