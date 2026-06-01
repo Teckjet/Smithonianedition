@@ -1,0 +1,68 @@
+[
+   {
+  "id": "E229/15A/1830",
+  "title": "Cuff",
+  "desc": "Maker / Artist: Mrs. Flag.; Donor / Associated People: Mr. Fred Bradshaw; Collection Site: File Hills Agency; Courtesy of the Royal Saskatchewan Museum",
+  "src": "assets/img/armwear_gloves/royal_regina_museum/mostly_white_beaded_cuff_1.png",
+  "images": [
+    "assets/img/armwear_gloves/royal_regina_museum/mostly_white_beaded_cuff_1.png",
+    "assets/img/armwear_gloves/royal_regina_museum/mostly_white_beaded_cuff_2.png",
+    "assets/img/armwear_gloves/royal_regina_museum/mostly_white_beaded_cuff_3.png"
+    ]
+  },
+  {
+    "src": "assets/img/armwear_gloves/Bandolier_Shoulder_sash_image_not_displayed.png",
+    "id": "147935",
+    "title": "Bandolier / Shoulder Sash (Image Not Displayed)",
+    "desc": "Image withheld due to Cultural Sensitivity. Materials: Coyote fur, Brass bell(s), Glass bead(s), Feather(s); Techniques: Sewn, Overlay beadwork; Acquisition Source: Donald A. Cadzow; Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/armwear_gloves/armband.png",
+    "id": "147985",
+    "title": "Armband",
+    "desc": "Pair of beaded arm bands; Materials: Wool cloth, Buffalo hide, Glass bead(s); Techniques: Sewn, Overlay beadwork, Edge beaded; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/armwear_gloves/Bandolier_Shoulder_sash_image_not_displayed.png",
+    "id": "147990",
+    "title": "Bandolier / Shoulder Sash (Image Not Displayed)",
+    "desc": "Image withheld due to Cultural Sensitivity. Materials: Wool cloth, Buffalo Hide, Glass Bead(s); Techniques: Sewn, Overlay beadwork; Acquisition Source: Donald A. Cadzow; Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/armwear_gloves/gauntlet_cuff.png",
+    "id": "147991",
+    "title": "Gauntlet / Cuff",
+    "desc": "Pair of beaded gauntlets; Materials: Cotton cloth, Glass bead(s), Hide thong / Babiche, Thread; Techniques: Sewn, Overlay beadwork, Strung; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/armwear_gloves/bandolier_shoulder_sash.png",
+    "id": "148008",
+    "title": "Bandolier / Shoulder Sash",
+    "desc": "Shoulder ornament of otter skin decorated with beadwork and brass tacks; Materials: Otter skin, Glass bead(s), Brass tack(s), Wool yarn; Techniques: Sewn, Loom Beadwork, Studded Beaded, Edge Beaded; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/armwear_gloves/sleeves.png",
+    "id": "16002",
+    "title": "Sleeves",
+    "desc": "Pair of buckskin sleeves to attach behind shoulders of women's dress. Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/armwear_gloves/mittens.png",
+    "id": "15004",
+    "title": "Two Mittens (Pair)",
+    "desc": "Pair of mans buckskin summer mittens. Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+ {
+    "src": "assets/img/armwear_gloves/gloves.png",
+    "id": "15012",
+    "title": "Gloves",
+    "desc": "Pair of mens fur lined winter gloves. Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/armwear_gloves/mans_wristlet.png",
+    "id": "15015",
+    "title": "Man's Wristlet",
+    "desc": "Mans fur wristlet. Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  }
+
+]
