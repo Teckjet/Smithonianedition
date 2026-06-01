@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Peepeekisis Cree Nation Virtual Archives And Museum</title>
+    <meta name="description" content="Peepeekisis Cree Nation Virtual Archives And Museum" />
+    <meta name="keywords" content="Cree, Peepeekisis, Museum, Smithsonian" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Inter:wght@400;600&family=Cardo:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Vendor CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Keep your main.css if you want (optional). You asked CSS must be on the HTML file,
+         so feel free to remove this line if you truly want ZERO external CSS besides vendors. -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="assets/img/Peepeekisis-Flag.png" />
+
+    <style>
+      .museum-swiper{
+  width: 92vw;
+  max-width: 980px;
+  height: 68vh;
+  background:#000;
+  border: 1px solid var(--cream);
+  box-shadow: 0 10px 40px rgba(0,0,0,.8);
+}
+.museum-swiper .swiper-slide{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.museum-swiper .swiper-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.museum-swiper .swiper-button-prev,
+.museum-swiper .swiper-button-next{
+  color: var(--cream);
+}
+
+      :root {
+        --cream: #f1e2c5;
+        --brownbar: #55504d;
+        --museum: #1a1a1a;
+        --panel: rgba(43, 38, 33, 0.8);
+      }
+
+      /* Base */
+      body {
+        background: #000;
+        color: #fff;
+        margin: 0;
+      }
+
+      .pee-vintage {
+        font-family: "IM Fell English SC", serif;
+        letter-spacing: 2px;
+      }
+
+      /* ===== HEADER (light touch so it doesn't fight your template) ===== */
+
+   
+      .site-title a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Vintage nav text */
+      .navmenu > ul > li > a,
+      .navmenu .dropdown ul a {
+        font-family: "IM Fell English SC", serif !important;
+        letter-spacing: 2.5px;
+        font-weight: normal;
+        text-rendering: optimizeLegibility;
+        filter: contrast(110%) sepia(6%);
+      }
+
+      /* ===== SECTION 1: TITLE BAND (this is “file 4” look) ===== */
+     
+    
+  
+
+      /* ===== SECTION 2: BROWN TRANSITION BAR ===== */
+      .brown-bar {
+        height: 55px;
+        background: var(--brownbar);
+        width: 100%;
+      }
+
+      /* ===== SECTION 3: “CLICK ON A PHOTO” HERO ===== */
+      .instruction-hero .hero-content {
+        position: relative;
+        height: 260px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .instruction-hero .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+      }
+      .instruction-hero h2 {
+        font-size: clamp(1.6rem, 3vw, 2.7rem);
+        color: var(--cream);
+        margin: 0 0 6px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family: "IM Fell English SC", serif;
+      }
+      .instruction-hero p {
+        margin: 0;
+        color: #fff;
+        font-size: 1.15rem;
+        opacity: 0.9;
+        font-family: "Roboto", sans-serif;
+      }
+
+      /* ===== MASONRY GRID ===== */
+      .masonry-gallery {
+        column-count: 4;
+        column-gap: 15px;
+        padding: 28px;
+        background: var(--museum);
+      }
+      @media (max-width: 1200px) {
+        .masonry-gallery {
+          column-count: 3;
+        }
+      }
+      @media (max-width: 800px) {
+        .masonry-gallery {
+          column-count: 2;
+        }
+      }
+      @media (max-width: 500px) {
+        .masonry-gallery {
+          column-count: 1;
+        }
+      }
+
+      .item {
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 15px;
+        cursor: pointer;
+        position: relative;
+        background: #1a1512;
+        border-radius: 4px;
+        overflow: hidden;
+        border: 1px solid rgba(241, 226, 197, 0.15);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      }
+
+      .item img {
+        width: 100%;
+        display: block;
+        filter: grayscale(20%) brightness(90%);
+        transition: filter 0.35s ease;
+      }
+
+      .item:hover {
+        transform: translateY(-6px) scale(1.01);
+        border-color: rgba(241, 226, 197, 0.65);
+        box-shadow: 0 18px 34px rgba(0, 0, 0, 0.55);
+      }
+
+      .item:hover img {
+        filter: grayscale(0%) brightness(110%);
+      }
+
+      .exhibit-label {
+        padding: 10px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+      .item:hover .exhibit-label {
+        opacity: 1;
+      }
+
+      .artifact-id {
+        font-size: 0.72rem;
+        color: rgba(241, 226, 197, 0.55);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        letter-spacing: 0.5px;
+      }
+
+      .artifact-title {
+        font-family: "IM Fell English SC", serif;
+        font-size: 0.95rem;
+        color: var(--cream);
+        letter-spacing: 1.2px;
+      }
+
+      /* ===== CUSTOM MODAL (IMPORTANT: do NOT use .modal; Bootstrap also uses it) ===== */
+      .museum-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--brownbar);
+        justify-content: center;
+        align-items: center;
+        padding: 26px 16px;
+      }
+      .museum-modal.is-open {
+        display: flex;
+      }
+
+      .museum-close {
+        position: absolute;
+        top: 18px;
+        right: 28px;
+        color: var(--cream);
+        font-size: 52px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+        transition: 0.2s;
+      }
+      .museum-close:hover {
+        color: #fff;
+      }
+
+      .museum-modal-content {
+        max-width: 92vw;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: museumFade 0.25s ease-out;
+      }
+
+      @keyframes museumFade {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #modalImg {
+        max-width: 92vw;
+        max-height: 68vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border: 1px solid var(--cream);
+        background: #000;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+      }
+
+      #caption {
+        width: 100%;
+        max-width: 950px;
+        margin-top: 10px;
+        padding: 18px 18px 20px;
+        background: var(--panel);
+        border-radius: 0 0 10px 10px;
+        color: var(--cream);
+        text-align: center;
+      }
+      #caption small {
+        display: block;
+        color: rgba(241, 226, 197, 0.55);
+        margin-bottom: 6px;
+      }
+      #caption h2 {
+        margin: 0 0 8px;
+        font-family: "IM Fell English SC", serif;
+        letter-spacing: 2px;
+        color: #fff;
+        font-size: 2rem;
+      }
+      #caption p {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        opacity: 0.9;
+        line-height: 1.6;
+        font-size: 1.08rem;
+      }
+
+      /* Footer */
+   
+    </style>
+  </head>
+
+  <body class="index-page">
+    <!-- Header -->
+    <header class="header header-photo">
+      <div class="header-bg" style="background-image: url('assets/img/featured/peepeekisis_sign_from_far.jpg')"></div>
+      <div class="header-overlay"></div>
+
+      <div class="container">
+        <a href="index.html" class="site-crest" aria-label="Peepeekisis Cree Nation Home">
+          <img src="assets/img/Peepeekisis-Flag.png" alt="Peepeekisis Cree Nation Flag" />
+        </a>
+
+        <h1 class="site-title">
+          <a href="index.html">Peepeekisis Cree Nation Virtual Archives And Museum</a>
+        </h1>
+
+        <!-- Keep your original nav markup (dropdowns etc.) -->
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+
+            <li class="dropdown">
+              <a href="photographs.html">
+                <span>Photographs</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+              <ul>
+                <li><a href="headdressesandheadgear.html" class="active">Headdresses &amp; Headgear</a></li>
+                <li><a href="clothing.html">Clothing</a></li>
+                <li><a href="footwear.html">Footwear</a></li>
+                <li><a href="necklaces_earrings_hair.html">Necklaces, Earrings &amp; Hair</a></li>
+                <li><a href="bands_belts_and_sashes.html">Bands, Belts &amp; Sashes</a></li>
+                <li><a href="ceremony_and_dance.html">Ceremony &amp; Dance Items</a></li>
+                <li><a href="household_travel_tools.html">Household, Travel &amp; Tools</a></li>
+                <li><a href="tipis.html">Tipis</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="armwear_gloves.html">Armwear &amp; Gloves </a></li>
+                <li><a href="infant_items.html">Infant Items</a></li>
+                <li><a href="bags.html">Bags</a></li>
+                <li><a href="breastplates.html">Breastplates</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="misc.html">Misc</a></li>
+              </ul>
+            </li>
+
+            <li><a href="history.html">History</a></li>
+            <li><a href="veterans.html">Veterans</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- (1) Title band — matches your “4” screenshot -->
+      <section class="photo-title-band">
+        <div class="container" data-aos="fade-up">
+          <h1 class="photo-title">Headdresses and Headgear</h1>
+          <p class="photo-note">Some culturally sensitive items are described but not displayed.</p>
+        </div>
+      </section>
+
+      <!-- (2) Brown bar -->
+      <div class="brown-bar"></div>
+
+      <!-- (3) Click on a Photo hero -->
+      <section class="instruction-hero">
+        <div
+          class="hero-content"
+          style="background-image: url('assets/img/headdresses/headdress_made_of_feathers_with_animal_claws_attached.png');"
+        >
+          <div class="hero-overlay">
+            <h2 class="pee-vintage">Click on a Photo</h2>
+            <p>Read about its story</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- (4) Gallery -->
+      <div id="gallery" class="masonry-gallery"></div>
+
+      <!-- Custom modal (not Bootstrap modal) -->
+    <div id="imageModal" class="museum-modal" role="dialog" aria-modal="true" aria-label="Artifact viewer">
+  <span class="museum-close" aria-label="Close">&times;</span>
+
+  <div class="museum-modal-content">
+
+    <!-- Single-image (default) -->
+    <img id="modalImg" src="" alt="Artifact" />
+
+    <!-- Carousel (only used when item.images exists) -->
+    <div class="swiper museum-swiper" id="museumSwiper" style="display:none;">
+      <div class="swiper-wrapper" id="swiperSlides"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div id="caption"></div>
+  </div>
+</div>
+
+
+    <footer id="footer" class="footer">
+      <div class="container text-center">
+        <p>© <span class="pee-vintage">Peepeekisis Cree Nation</span> | Virtual Archives</p>
+      </div>
+    </footer>
+
+    <!-- Vendor JS -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+   <script>
+  const gallery = document.getElementById("gallery");
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const caption = document.getElementById("caption");
+  const closeBtn = document.querySelector(".museum-close");
+
+const swiperEl = document.getElementById("museumSwiper");
+const swiperSlides = document.getElementById("swiperSlides");
+let swiperInstance = null;
+
+function openModal(item) {
+  modal.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+
+  caption.innerHTML = `
+    <small>${item.id || ""}</small>
+    <h2>${item.title || ""}</h2>
+    <p>${item.desc || ""}</p>
+  `;
+
+  const hasCarousel = Array.isArray(item.images) && item.images.length > 1;
+
+  if (!hasCarousel) {
+    // ✅ NORMAL ITEMS: show single image
+    if (swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = null;
+    }
+    swiperEl.style.display = "none";
+    swiperSlides.innerHTML = "";
+
+    // IMPORTANT: pick a valid src
+    const singleSrc = item.src || (item.images && item.images[0]) || "";
+    modalImg.style.display = "block";
+    modalImg.src = singleSrc;
+    modalImg.alt = item.title || "Artifact";
+    return;
+  }
+
+  // ✅ ONLY SPECIAL ITEM: show carousel
+  modalImg.style.display = "none";
+  swiperEl.style.display = "block";
+
+  swiperSlides.innerHTML = item.images.map((src) => `
+    <div class="swiper-slide">
+      <img src="${src}" alt="${item.title || "Artifact"}" loading="lazy">
+    </div>
+  `).join("");
+
+  if (swiperInstance) {
+    swiperInstance.destroy(true, true);
+    swiperInstance = null;
+  }
+
+  swiperInstance = new Swiper("#museumSwiper", {
+    loop: true,
+    speed: 350,
+    slidesPerView: 1,
+    grabCursor: true,
+    keyboard: { enabled: true },
+    pagination: { el: "#museumSwiper .swiper-pagination", clickable: true },
+    navigation: {
+      nextEl: "#museumSwiper .swiper-button-next",
+      prevEl: "#museumSwiper .swiper-button-prev"
+    }
+  });
+}
+
+function closeModal() {
+  modal.classList.remove("is-open");
+  caption.innerHTML = "";
+  document.body.style.overflow = "";
+
+  // reset to default state
+  modalImg.src = "";
+  modalImg.style.display = "block";
+
+  swiperEl.style.display = "none";
+  swiperSlides.innerHTML = "";
+
+  if (swiperInstance) {
+    swiperInstance.destroy(true, true);
+    swiperInstance = null;
+  }
+}
+
+  function buildGallery(data) {
+    gallery.innerHTML = "";
+    data.forEach((item) => {
+      const div = document.createElement("div");
+      div.className = "item";
+
+      const thumb = (item.images && item.images.length && item.images[0]) || item.src;
+
+
+      if (!thumb) return; // skips broken items
+
+
+      div.innerHTML = `
+        <img src="${thumb}" alt="${item.title || ""}" loading="lazy">
+        <div class="exhibit-label">
+          <span class="artifact-id">${item.id || ""}</span>
+          <span class="artifact-title">${item.title || ""}</span>
+        </div>
+      `;
+
+      div.addEventListener("click", () => openModal(item));
+      gallery.appendChild(div);
+    });
+  }
+
+  fetch("tipis.json?t=" + Date.now())
+    .then((r) => r.json())
+    .then((data) => buildGallery(data))
+    .catch((err) => console.error("Gallery Error:", err));
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (modal) modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+  window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+</script>
+
+    <!-- Your main.js (optional, if your nav toggle needs it) -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
