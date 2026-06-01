@@ -1,0 +1,163 @@
+[
+  {
+    "src": "assets/img/bags/Bandolier_Shoulder_sash_image_not_displayed.png",
+    "id": "147935",
+    "title": "Bandolier / Shoulder Sash (Image Not Displayed)",
+    "desc": "Image withheld due to Cultural Sensitivity; Materials: Coyote skin, Brass bell(s), Glass bead(s), Feather(s); Techniques: Sewn, Overlay beadwork; Acquisition Source: Donald A. Cadzow; Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/buffalo_skin_bag.png",
+    "id": "147949",
+    "title": "Buffalo Skin Bag",
+    "desc": "Bag of buffalo skin decorated with bead work; Materials: Buffalo hide, Glass bead(s); Techniques: Sewn, Edge beaded; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/bag.png",
+    "id": "147955",
+    "title": "Bag",
+    "desc": "Buffalo skin bag; Materials: Buffalo hide; Techniques: Sewn; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/bag_image_not_displayed.png",
+    "id": "147967",
+    "title": "Bag (Image Not Displayed)",
+    "desc": "Image withheld due to cultural sensitivity; Materials: Dearhide; Techniques: Sewn; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/moose_skin_bag.png",
+    "id": "147979",
+    "title": "Bag",
+    "desc": "Bag made from leg skin of moose. Materials: Moose hide; Techniques: Sewn; Acquisition Source: Donald A. Cadzow; Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/medicine_bag_and_contents_image_not_displayed.png",
+    "id": "147987",
+    "title": "Medicine Bag and Contents (Image Not Displayed)",
+    "desc": "Image withheld due to cultural sensitivity; Materials: Weasel skin/fur; Techniques: Sewn; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/medicine_bag_image_not_displayed.png",
+    "id": "147988",
+    "title": "Medicine Bag (Image Not Displayed)",
+    "desc": "Image withheld due to cultural sensitivity; Materials: Mink fur, glass bead(s), metal cones; Techniques: Sewn; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/medicine_bag_image_not_displayed.png",
+    "id": "147989",
+    "title": "Medicine Bag (Image Not Displayed)",
+    "desc": "Image withheld due to cultural sensitivity; Materials: Weasel fur; Techniques: Sewn; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/medicine_bag_image_not_displayed.png",
+    "id": "147995",
+    "title": "Medicine Bag (Image Not Displayed)",
+    "desc": "Image withheld due to cultural sensitivity; Materials: Weasel fur; Techniques: Sewn; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/charm_and_container_image_not_displayed.png",
+    "id": "147998",
+    "title": "Charm and Container (Image Not Displayed)",
+    "desc": "Image withheld due to cultural sensitivity; Materials: Dearhide, Fossil; Techniques: Wrapped; Acquisition Source: Donald A. Cadzow; Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+ {
+    "src": "assets/img/bags/beaded_moose_skin_bag.png",
+    "id": "148005",
+    "title": "Beaded Moose Skin Bag",
+    "desc": "Bag made of leg skin of moose, beaded decoration; Materials: Moose hide, cotton cloth, glass bead(s), hide thong / babiche; Techniques: Sewn, appliqued, lazy / lane stitch beadwork; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/bags/medicine_bag_image_not_displayed.png",
+    "id": "148013",
+    "title": "Medicine Bag (Image Not Displayed)",
+    "desc": "Image without due to cultural sensitivity; Materials: Hide; Techniques: Sewn; Acquisition Source: Donald A. Cadzow; Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+ {
+    "src": "assets/img/bags/bag_of_moose_skin.png",
+    "id": "148017",
+    "title": "Bag",
+    "desc": "Bag made from skin of a moose's leg; Materials: Moosehide; Techniques: Sewn; Acquisition Source: Donald A. Cadzow; Collection Site: File Hills; Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+  "id": "244388",
+  "title": "Tobacco Bag",
+  "desc": "Man's tobacco pouch, on caribou hide. Materials: Caribou hide, glass bead(s); Techniques: Edge beaded, overlay beadwork; Acquisition Source: Maj. Kenneth C. Miller, Dorothea Miller; Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian",
+  "src": "assets/img/bags/beaded_tabacco_pouch_1.png",
+  "images": [
+    "assets/img/bags/beaded_tabacco_pouch_1.png",
+    "assets/img/bags/beaded_tabacco_pouch_2.png"
+  ]
+  }, 
+ {
+    "src": "assets/img/bags/pemmican_bag.png",
+    "id": "84281",
+    "title": "Pemmican Bqg",
+    "desc": "Pemmican bag of untanned buffalo hide; Accession Year: 1903; Accession Number: 851; Collected by: Stephen C. Simms; Collection Site: North America, Canada, Saskatchewan, File Hills Reserve; Courtesy of Chicago Field Museum"
+  },
+   {
+    "src": "assets/img/bags/beaded_pouch.png",
+    "id": "268085",
+    "title": "Beaded Pouch",
+    "desc": "Pouch or bag of treated hide, possibly deer skin; geometric beaded decoration in pink, yellow, and white (various shades). Extensive fringe at the bottom. ;Material: Animal hide and glass beads; Accession Year: 1976; Accession Number: 3321; Collected by: John W. Wells; Collection Site: North America, Canada, Southern Alberta or Saskatchewan, Touchwood Hills Agency; Courtesy of Chicago Field Museum"
+  },
+ {
+    "src": "assets/img/bags/pipe_bag.png",
+    "id": "15046",
+    "title": "Pipe Bag",
+    "desc": "Buckskin bag, ornamented with beads; Accession Year: 1893; Accession Number: 23; Collected by: E.F. Wilson; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+{
+    "src": "assets/img/bags/paint_bag.png",
+    "id": "15047",
+    "title": "Paint Bag",
+    "desc": "Buckskin paint bag, ornamented with beads and tin pendants; Accession Year: 1893; Accession Number: 23; Collected by: E.F. Wilson; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/bags/skin_bag_image_not_available.png",
+    "id": "15055",
+    "title": "Buckskin Bag (Image Not Available)",
+    "desc": "Small buckskin bag, ornamented with porcupine quills. Row of beads around the upper edge. Not found in collections storage; no photograph available; Accession Year: 1893; Accession Number: 112; Collected by: Edward E. Ayer; Collection Site: North America, Canada, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/bags/small_buckskin_bag_image_not_available.png",
+    "id": "15056",
+    "title": "Buckskin Bag (Image Not Available)",
+    "desc": "Small buckskin bag, ornamented with porcupine quills. Not found in collections storage; no photograph available; Accession Year: 1893; Accession Number: 112; Collected by: Edward E. Ayer; Collection Site: North America, Canada, Edmonton; Courtesy of Chicago Field Museum"
+  },
+ {
+    "src": "assets/img/bags/parfleche_bag.png",
+    "id": "15090",
+    "title": "Parfleche Bag",
+    "desc": "Prevision saddle bag, raw hide, ornamented with painted designs; Tested positive for arsenic; Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/bags/saddle_bag.png",
+    "id": "15097",
+    "title": "Saddle Bag",
+    "desc": "Prevision saddle bag, raw hide, ornamented with painted designs; Tested positive for arsenic; Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/bags/medicine_bag.png",
+    "id": "15011",
+    "title": "Medicine Bag",
+    "desc": "Buckskin medicine bag; Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/bags/fur_medicine_bag.png",
+    "id": "15016",
+    "title": "Fur Medicine Bag",
+    "desc": "Fur medicine bag. Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/bags/provision_bag.png",
+    "id": "15025",
+    "title": "Provision Bag",
+    "desc": "Calf Skin prevision bag; Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+    "src": "assets/img/bags/medicine_pouch.png",
+    "id": "15034",
+    "title": "Medicine Pouch",
+    "desc": "Mans buckskin war medicine pouch, ornamented with porcupine quills and fur; Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  }
+
+]
