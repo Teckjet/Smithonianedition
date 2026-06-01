@@ -1,0 +1,59 @@
+[
+  {
+    "src": "assets/img/tipis/royal_regina_museum/tipi_model_image_not_displayed.png",
+    "id": "E180/8/1312",
+    "title": "Tipi Model (Image Not Displayed)",
+    "desc": "Donor / Associated People: Mrs. Star Blanket; Maker / Artist: Mrs. Starblanket; Production Date: August 1921; Accession Date: 1922; Collection Site: File Hills Agency; Courtesy of the Royal Saskatchewan Museum"
+  },
+   {
+  "id": "E1261/2/12096",
+  "title": "Tipi Model",
+  "desc": "Accession Date: 1977; Collection Site: File Hills Agency; Courtesy of the Royal Saskatchewan Museum",
+  "src": "assets/img/tipis/royal_regina_museum/tipi_model.png",
+  "images": [
+    "assets/img/tipis/royal_regina_museum/tipi_model.png",
+    "assets/img/tipis/royal_regina_museum/tipi_model_2.png",
+    "assets/img/tipis/royal_regina_museum/tipi_model_3.png"
+    ]
+  },
+  {
+    "src": "assets/img/tipis/tipi.png",
+    "id": "147995",
+    "title": "Tipi",
+    "desc": "Painted Lodge Buffalo Hide, 14 Lodge Poles; Accession Year: 1893; Accession Number: 46; Collected by: Isaac Cowie; Collection Site: North America, Canada, Alberta, Edmonton; Courtesy of Chicago Field Museum"
+  },
+  {
+  "id": "147974",
+  "title": "Tipi Cover, Door, and Pegs",
+  "desc": "Canvas tipi <REG: tepee> and door with painted decoration and bundle of nine pegs decorated with feathers, and bundle of pegs, used for holding tipi flap. Formerly belonged to Dusty Horn, medicine man of the Poor Man Reservation. Materials: Cotton canvas, Wood, Feather(s), Paint; Techniques: Sewn, Painted, Carved; Acquisition Source: Cadzow, Donald A. (Collector); Cadzow, Donald A. (MAI Agent); Photos by Walter Larrimore; Collection Site: File Hills Reserve; Courtesy of the Smithsonian: National Museum of the American Indian",
+  "src": "assets/img/tipis/tipi_cover.png",
+  "images": [
+    "assets/img/tipis/tipi_cover.png",
+    "assets/img/tipis/tipi_door_pegs_with_tipi_cover.png"
+  ]
+ },
+  {
+    "src": "assets/img/tipis/family_in_front_of_tipi.png",
+    "id": "N11770",
+    "title": "Buffalo Bull and Family In Front of Painted Tipi",
+    "desc": "Group (\"Buffalo Bull\" and family) in costume in front of painted tipi. Prairie Cree. File Hills Reservation. Saskatchewan. Canada. Photo by D. A. Cadzow, 1926.NMAI Archives Collection #NMAI.AC.001.004. Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/tipis/painted_tipi_image_not_displayed.png",
+    "id": "N23012",
+    "title": "Painted Tipi (Image Not Displayed)",
+    "desc": "Painted tipi. Used for Council Meetings. Cree Tribe. File Hills Reservation. Saskatchewan. Canada. 1926. Presented by Kenneth C. Miller. NMAI Archives Collection #NMAI.AC.001.049. Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+  {
+    "src": "assets/img/tipis/woman_and_painted_tipi_image_not_displayed.png",
+    "id": "N23013",
+    "title": "Woman and Painted Tipi (Image Not Displayed)",
+    "desc": "Woman and painted tipi (Buffalo Bull's tipi). Cree Tribe. File Hills Reservation. Saskatchewan. Canada. 1926. Presented by Kenneth C. Miller. NMAI Archives Collection #NMAI.AC.001.049. Courtesy of the Smithsonian: National Museum of the American Indian"
+  },
+ {
+    "src": "assets/img/tipis/painted_council_tipi_image_not_displayed.png",
+    "id": "N23014",
+    "title": "Painted Council Tipi (Image Not Displayed)",
+    "desc": "Painted Council tipi. Cree Tribe. File Hills Reservation.Saskatchewan. Canada. 1926. Presented by Kenneth C. Miller. NMAI Archives Collection #NMAI.AC.001.049. Courtesy of the Smithsonian: National Museum of the American Indian"
+  }
+]
